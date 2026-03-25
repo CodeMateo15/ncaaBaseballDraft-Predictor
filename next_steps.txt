@@ -1,0 +1,11 @@
+- Make partial dependence plot (PDP)
+
+- Add Pythagorean Expectation Percent
+
+- Re-add percent based prediction college order
+
+- Make sure Journal of Sports Analytics is right choice
+
+- Write Paper
+
+- Make RISE Poster
