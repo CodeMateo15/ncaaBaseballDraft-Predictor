@@ -4,8 +4,12 @@
 
 - Re-add percent based prediction college order
 
-- Make sure Journal of Sports Analytics is right choice
+- Slot predictor and make proportion (bonus/slot)
+	- 1 means they got their slot amount, >1 means the team valued them very highly, and <1 means the 
+	  team got them at a "discount" 
 
-- Write Paper
+- Make sure Journal of Sports Analytics or Journal of Quantitative Analysis in Sports is right choice
 
 - Make RISE Poster
+
+- Write Paper
