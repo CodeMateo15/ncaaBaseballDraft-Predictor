@@ -3,6 +3,6 @@
 
 - Grab top 250 prospects and include them into model
 
-- Make sure Journal of Sports Analytics or Journal of Quantitative Analysis in Sports is right choice
+- Make sure Journal of Sports Analytics, International Journal of Performance Analysis, or Journal of Quantitative Analysis in Sports is right choice
 
 - Write Paper
