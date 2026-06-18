@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Python
+__pycache__/
+*.pyc
+
+# R
+.Rhistory
+
+# Claude Code
+.claude/
+
+# Editors
+.vscode/
+.idea/
+
+# Private FanGraphs data (cannot redistribute under FG terms of use).
+# Public stripped copies live alongside as *_public.csv. See README.md.
+CSV+Code Files/ncaa_battingQualifiedCSV/*.csv
+CSV+Code Files/ncaa_battingNoMinCSV/*.csv
+CSV+Code Files/ncaa_pitchingQualifiedCSV/*.csv
+CSV+Code Files/ncaa_pitchingNoMinCSV/*.csv
+CSV+Code Files/Main XGBoost Files/batting_pitching_combined.csv
+CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi.csv
