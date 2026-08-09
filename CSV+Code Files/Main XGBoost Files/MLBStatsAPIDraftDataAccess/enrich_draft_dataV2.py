@@ -1,7 +1,7 @@
 """
 Fetch MLB Draft data from StatsAPI and save the raw JSON response.
 Usage:
-    python fetch_draft_json.py                     # just 2025
+    python fetch_draft_json.py                     # just 2026
     python fetch_draft_json.py --years 2024 2025   # multiple years
     python fetch_draft_json.py --output ./data/     # custom output directory
 """
@@ -20,8 +20,8 @@ SLEEP_SEC = 0.15
 def main():
     parser = argparse.ArgumentParser(description="Fetch raw MLB Draft JSON from StatsAPI")
     parser.add_argument(
-        "--years", nargs="+", type=int, default=[2025],
-        help="Draft year(s) to fetch (default: 2025)"
+        "--years", nargs="+", type=int, default=[2026],
+        help="Draft year(s) to fetch (default: 2026)"
     )
     parser.add_argument(
         "--output", type=str, default=".",

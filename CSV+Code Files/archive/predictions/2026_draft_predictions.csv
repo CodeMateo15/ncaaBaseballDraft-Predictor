@@ -1,0 +1,301 @@
+Pick,Tier,name,team,conference,role,draft_prob_pct,pred_bonus
+1,Early,Vahn Lackey,GT,ACC,Batter,91.2,3710476.0
+2,Early,Hunter Dietz,ARK,SEC,Pitcher,100.0,3479136.0
+3,Early,Drew Burress,GT,ACC,Batter,99.9,2388080.0
+4,Early,Liam Peterson,FLA,SEC,Pitcher,100.0,1325139.0
+5,Early,Jarren Advincula,GT,ACC,Batter,99.8,2676945.0
+6,Early,Tegan Kuhns,TENN,SEC,Pitcher,99.9,1172805.0
+7,Early,Cole Carlon,ASU,Big 12,Pitcher,100.0,1685696.0
+8,Early,Jake Schaffner,UNC,ACC,Batter,99.9,1266235.0
+9,Early,Owen Hull,UNC,ACC,Batter,99.9,1360792.0
+10,Early,Roch Cholowsky,UCLA,Big Ten,Batter,99.8,1161621.0
+11,Early,Jack Radel,ND,ACC,Pitcher,100.0,1145971.0
+12,Early,Taylor Rabe,MISS,SEC,Pitcher,100.0,1561951.0
+13,Early,Joey Volchko,UGA,SEC,Pitcher,99.9,1552484.0
+14,Early,Wes Mendes,FSU,ACC,Pitcher,100.0,1664449.0
+15,Early,Ethan Kleinschmit,ORST,DI Independent,Pitcher,99.9,1042290.0
+16,Early,Carson Kerce,GT,ACC,Batter,99.8,1285128.0
+17,Early,Nathan Taylor,CIN,Big 12,Pitcher,100.0,1009009.0
+18,Early,Alex Sosa,MIA,ACC,Batter,99.7,1312170.0
+19,Early,AJ Gracia,UVA,ACC,Batter,99.7,1542809.0
+20,Early,Daniel Jackson,UGA,SEC,Batter,99.8,1849723.0
+21,Early,Mulivai Levu,UCLA,Big Ten,Batter,99.9,1336690.0
+22,Early,Carson Tinney,TEX,SEC,Batter,99.7,2619144.0
+23,Early,Dee Kennedy,KSU,Big 12,Batter,99.7,1031494.0
+24,Early,Connor Fennell,VAN,SEC,Pitcher,99.9,911215.0
+25,Early,Ethan Norby,ECU,American,Pitcher,100.0,987126.0
+26,Early,Ryder Helfrick,ARK,SEC,Batter,99.9,1061728.0
+27,Early,Isaiah Magdaleno,HAW,Big West,Pitcher,99.3,866193.0
+28,Early,Aiden Robbins,TEX,SEC,Batter,99.9,1449564.0
+29,Early,Tyson LeBlanc,KU,Big 12,Batter,99.6,1285082.0
+30,Early,Will Baker,GT,ACC,Batter,99.8,548244.0
+31,Early,LJ Mercurius,OU,SEC,Pitcher,100.0,730646.0
+32,Early,Deiten Lachance,OU,SEC,Batter,99.8,749147.0
+33,Early,Rylan Lujo,UGA,SEC,Batter,99.8,1058953.0
+34,Early,Ace Reese,MSST,SEC,Batter,99.7,875603.0
+35,Early,Gavin Grahovac,TA&M,SEC,Batter,99.8,1029105.0
+36,Early,Daniel Cuvet,MIA,ACC,Batter,99.7,568297.0
+37,Early,Jackson Flora,UCSB,Big West,Pitcher,99.6,1356052.0
+38,Early,Eric Segura,ORST,DI Independent,Pitcher,99.6,694262.0
+39,Early,Trey Beard,FSU,ACC,Pitcher,100.0,604289.0
+40,Early,Andrew Williamson,UCF,Big 12,Batter,93.2,1061953.0
+41,Early,Camden Kozeal,ARK,SEC,Batter,99.9,1015612.0
+42,Early,Henry Ford,TENN,SEC,Batter,99.8,506473.0
+43,Early,Kade Lewis,WAKE,ACC,Batter,99.7,653349.0
+44,Early,Will Gasparino,UCLA,Big Ten,Batter,99.3,431019.0
+45,Early,Jack Natili,CIN,Big 12,Batter,98.8,677911.0
+46,Early,Cooper Nicholson,UNC,ACC,Batter,99.4,444129.0
+47,Early,Carson Jasa,NEB,Big Ten,Pitcher,100.0,796090.0
+48,Early,Tate McKee,GT,ACC,Pitcher,100.0,485997.0
+49,Early,Cade Townsend,MISS,SEC,Pitcher,100.0,668695.0
+50,Early,Ethan Mendoza,TEX,SEC,Batter,99.9,539738.0
+51,Middle,Caden Sorrell,TA&M,SEC,Batter,99.5,888386.0
+52,Middle,Logan Reddemann,UCLA,Big Ten,Pitcher,99.9,880773.0
+53,Middle,Adam Agresti,SJU,Big East,Batter,94.0,690641.0
+54,Middle,Christopher Hacopian,TA&M,SEC,Batter,99.5,624619.0
+55,Middle,Gavin Eddy,CAL,ACC,Pitcher,100.0,588241.0
+56,Middle,Sawyer Strosnider,TCU,Big 12,Batter,99.4,605814.0
+57,Middle,Logan Hughes,TTU,Big 12,Batter,99.8,973985.0
+58,Middle,Bear Harrison,TA&M,SEC,Batter,99.6,627284.0
+59,Middle,Evan Dempsey,FGCU,ASUN,Two-Way,99.8,1294984.0
+60,Middle,Ty Head,NCSU,ACC,Batter,99.8,1170993.0
+61,Middle,Brayden Dowd,FSU,ACC,Batter,99.8,426230.0
+62,Middle,Aidan Knaak,CLEM,ACC,Pitcher,100.0,503278.0
+63,Middle,Joe Tiroly,UVA,ACC,Batter,99.5,672034.0
+64,Middle,Kollin Ritchie,OKST,Big 12,Batter,99.6,995381.0
+65,Middle,Ryan Zuckerman,GT,ACC,Batter,99.4,797345.0
+66,Middle,Gabe Gaeckle,ARK,SEC,Pitcher,99.9,426390.0
+67,Middle,Jake Brown,LSU,SEC,Batter,99.6,685437.0
+68,Middle,Dominic Voegele,KU,Big 12,Pitcher,99.8,817787.0
+69,Middle,Ruger Riojas,TEX,SEC,Pitcher,100.0,413624.0
+70,Middle,Colby Turner,MICH,Big Ten,Batter,99.9,533220.0
+71,Middle,Kevin Takeuchi,USC,Big Ten,Batter,100.0,611951.0
+72,Middle,Roman Martin,UCLA,Big Ten,Batter,99.3,440317.0
+73,Middle,Cooper Allen,UNCW,CAA,Pitcher,99.9,244441.0
+74,Middle,Jason DeCaro,UNC,ACC,Pitcher,95.9,337009.0
+75,Middle,Tyler Fay,ALA,SEC,Pitcher,99.8,382889.0
+76,Middle,Zion Rose,LOU,ACC,Batter,98.9,754729.0
+77,Middle,Justin Lebron,ALA,SEC,Batter,99.9,564884.0
+78,Middle,Ryan Cooney,ORE,Big Ten,Batter,99.8,457959.0
+79,Middle,Trevor Hansen,UCI,Big West,Pitcher,99.8,507035.0
+80,Middle,Macon Winslow,UNC,ACC,Batter,99.1,456893.0
+81,Middle,James Guyette,KSU,Big 12,Pitcher,99.9,449100.0
+82,Middle,Luke Costello,WAKE,ACC,Batter,99.0,495452.0
+83,Middle,Mark Quatrani,ND,ACC,Batter,98.6,261314.0
+84,Middle,Brett Renfrow,VT,ACC,Pitcher,99.8,304086.0
+85,Middle,Kent Schmidt,GT,ACC,Batter,99.5,339350.0
+86,Middle,Tanner Marsh,LIB,CUSA,Batter,99.6,478174.0
+87,Middle,Steven Milam,LSU,SEC,Batter,99.8,458640.0
+88,Middle,Jacob Dudan,NCSU,ACC,Pitcher,99.3,346609.0
+89,Middle,Max Bayles,SCU,WCC,Pitcher,100.0,432591.0
+90,Middle,Ryan Lynch,UNC,ACC,Pitcher,99.7,320211.0
+91,Middle,Luke Nixon,NCSU,ACC,Batter,99.6,488533.0
+92,Middle,Braden Holcomb,VAN,SEC,Batter,98.9,366543.0
+93,Middle,Hunter Elliott,MISS,SEC,Pitcher,99.6,110475.0
+94,Middle,Kyle Jones,FLA,SEC,Batter,99.9,451060.0
+95,Middle,Colton Coates,LT,CUSA,Batter,92.8,280994.0
+96,Middle,Jake Long,UTAH,Big 12,Batter,99.0,406644.0
+97,Middle,Charlie Sutherland,MINN,Big Ten,Batter,99.0,439682.0
+98,Middle,Evan Blanco,TENN,SEC,Pitcher,99.8,191187.0
+99,Middle,Garrett Lambert,MER,SoCon,Pitcher,99.9,277488.0
+100,Middle,Hudson Brown,UK,SEC,Batter,98.3,510760.0
+101,Middle,Ty Horn,NEB,Big Ten,Pitcher,100.0,247813.0
+102,Middle,Cameron Johnson,OU,SEC,Pitcher,99.7,372276.0
+103,Middle,Robert Evans,MIA,ACC,Pitcher,100.0,172360.0
+104,Middle,Derek Curiel,LSU,SEC,Batter,99.9,517061.0
+105,Middle,Hideki Prather,CAL,ACC,Batter,99.7,382919.0
+106,Middle,Russell Sandefer,FLA,SEC,Pitcher,99.5,351227.0
+107,Middle,Marcus Kruzan,MINN,Big Ten,Pitcher,98.1,261718.0
+108,Middle,David Rossow,CAM,CAA,Pitcher,99.9,89210.0
+109,Middle,Gavin Gallaher,UNC,ACC,Batter,99.9,572122.0
+110,Middle,Zane Adams,ALA,SEC,Pitcher,99.8,148668.0
+111,Middle,Brady Ballinger,KU,Big 12,Batter,90.1,320409.0
+112,Middle,Rohan Lettow,SDSU,Mountain West,Pitcher,90.9,301278.0
+113,Middle,Brady Neal,ALA,SEC,Batter,95.1,287163.0
+114,Middle,Charles West,CONN,Big East,Pitcher,98.2,316848.0
+115,Middle,Alex Petrovic,AUB,SEC,Pitcher,99.9,96310.0
+116,Middle,Armani Guzman,WVU,Big 12,Batter,99.5,407283.0
+117,Middle,Armani Raygoza,RGV,Southland,Batter,93.2,447334.0
+118,Middle,Kole Klecker,ASU,Big 12,Pitcher,99.8,297898.0
+119,Middle,Augie Lopez,USC,Big Ten,Batter,99.2,243731.0
+120,Middle,Erik Paulsen,UNC,ACC,Batter,99.6,314056.0
+121,Middle,Adrian Lopez,USC,Big Ten,Batter,99.9,393376.0
+122,Middle,Jack Spanier,MINN,Big Ten,Batter,95.8,601389.0
+123,Middle,Luke Harrison,TEX,SEC,Pitcher,99.8,79524.0
+124,Middle,Kam Durnin,MIZ,SEC,Batter,98.6,525686.0
+125,Middle,Tyler Bell,UK,SEC,Batter,99.7,624625.0
+126,Middle,Nu'u Contrades,ASU,Big 12,Batter,99.6,247821.0
+127,Middle,Maxx Yehl,WVU,Big 12,Pitcher,100.0,346696.0
+128,Middle,Ethan Hindle,UK,SEC,Batter,99.4,500358.0
+129,Middle,Brendan Brock,OU,SEC,Batter,99.7,541777.0
+130,Middle,Zack Konstantinovsky,RUTG,Big Ten,Pitcher,99.0,214104.0
+131,Middle,Caden Aoki,UGA,SEC,Pitcher,99.8,80269.0
+132,Middle,Jaxon Willits,OU,SEC,Batter,99.0,420163.0
+133,Middle,Duncan Marsten,WAKE,ACC,Pitcher,100.0,275908.0
+134,Middle,Cole Raile,VMI,SoCon,Batter,91.6,308431.0
+135,Middle,Johnny Nuanez,WICH,American,Pitcher,93.4,164607.0
+136,Middle,Sherman Johnson,NCSU,ACC,Batter,95.3,330184.0
+137,Middle,Colin Fisher,ARK,SEC,Pitcher,99.8,257941.0
+138,Middle,Eric Guevara,AUB,SEC,Batter,99.9,341030.0
+139,Middle,Charlie Scholvin,TOL,MAC,Batter,99.7,219144.0
+140,Middle,Jaxon Jelkin,UK,SEC,Pitcher,99.8,67468.0
+141,Middle,Ryan Marohn,NCSU,ACC,Pitcher,99.7,265967.0
+142,Middle,Jake Lambdin,DUKE,ACC,Batter,91.1,293889.0
+143,Middle,Ryan Niedzwiedz,SIUE,OVC,Batter,97.9,290200.0
+144,Middle,Chris Katz,MER,SoCon,Batter,95.2,69785.0
+145,Middle,Tanner Mally,WMU,MAC,Batter,97.5,464477.0
+146,Middle,Dominic Decker,MISS,SEC,Batter,97.2,20413.0
+147,Middle,Grayson Fitzwater,VMI,SoCon,Batter,91.6,174060.0
+148,Middle,Ethan Surowiec,FLA,SEC,Batter,99.8,454377.0
+149,Middle,Tre Phelps,UGA,SEC,Batter,99.8,156344.0
+150,Middle,Dean West,UCLA,Big Ten,Batter,98.8,387501.0
+151,Late,Camden Johnson,OU,SEC,Batter,99.6,536016.0
+152,Late,Bryson Moore,FSU,ACC,Pitcher,99.5,199212.0
+153,Late,Davis Hamilton,MINN,Big Ten,Batter,95.5,131090.0
+154,Late,Cal Scolari,ORE,Big Ten,Pitcher,99.9,169111.0
+155,Late,Regan Hall,ILL,Big Ten,Pitcher,98.7,198374.0
+156,Late,Cooper Consiglio,NCSU,ACC,Pitcher,93.6,289487.0
+157,Late,Caden Ferraro,TTU,Big 12,Batter,93.6,281966.0
+158,Late,Alex Fernandes,SJSU,Mountain West,Batter,99.2,25126.0
+159,Late,Darin Kuskie,ODU,Sun Belt,Pitcher,96.6,185430.0
+160,Late,Gable Mitchell,IOWA,Big Ten,Batter,99.9,115111.0
+161,Late,Derek Williams,MIA,ACC,Batter,92.5,36275.0
+162,Late,Collin Clarke,ORE,Big Ten,Pitcher,99.5,167527.0
+163,Late,Easton Talt,ORST,DI Independent,Batter,98.9,114925.0
+164,Late,RJ Hamilton,DUKE,ACC,Batter,97.5,236965.0
+165,Late,David Mendez,MD,Big Ten,Batter,92.0,335833.0
+166,Late,Judd Utermark,MISS,SEC,Batter,99.9,196519.0
+167,Late,Sam Harris,UVA,ACC,Batter,90.1,296372.0
+168,Late,Michael Smith,DAY,Atlantic 10,Batter,94.7,206761.0
+169,Late,Brady Waugh,UAB,American,Batter,94.0,271657.0
+170,Late,Isaac Morton,MINN,Big Ten,Pitcher,99.2,219824.0
+171,Late,Trey Hawsey,LT,CUSA,Batter,97.1,203068.0
+172,Late,Chris Diaz,FGCU,ASUN,Pitcher,93.7,178031.0
+173,Late,Matt Conte,WAKE,ACC,Batter,98.8,197886.0
+174,Late,Lorenzo Carrier,PITT,ACC,Batter,96.9,64068.0
+175,Late,Lane Arroyos,WKU,CUSA,Batter,92.8,241920.0
+176,Late,Oliver De La Torre,CAL,ACC,Pitcher,99.1,189351.0
+177,Late,Logan Shepherd,MER,SoCon,Batter,92.1,277592.0
+178,Late,Eric Becker,UVA,ACC,Batter,98.1,255573.0
+179,Late,Evan Holewinski,KENT,MAC,Pitcher,90.3,202599.0
+180,Late,Josh McDevitt,MIZ,SEC,Pitcher,100.0,202202.0
+181,Late,Tristan Bissetta,MISS,SEC,Batter,98.8,41643.0
+182,Late,Curry Sutherland,MOST,CUSA,Batter,93.9,159734.0
+183,Late,Luke Gaffney,CLEM,ACC,Batter,98.9,127581.0
+184,Late,Reese Chapman,TENN,SEC,Batter,99.3,118942.0
+185,Late,Colby Allen,USM,Sun Belt,Pitcher,99.5,59235.0
+186,Late,Caden Dulin,PITT,ACC,Batter,98.9,121294.0
+187,Late,Manny Salas,TXST,Sun Belt,Batter,98.0,297007.0
+188,Late,Aaron Piasecki,TROY,Sun Belt,Batter,99.9,128773.0
+189,Late,Joseph Urban,USM,Sun Belt,Batter,99.9,168335.0
+190,Late,Tanner Griffith,SMC,WCC,Batter,99.5,239831.0
+191,Late,Brayden Bakes,ILST,MVC,Batter,99.9,205859.0
+192,Late,Nick Williams,MSU,Big Ten,Batter,90.3,83866.0
+193,Late,Karson Bowen,FLA,SEC,Batter,99.1,229153.0
+194,Late,Jacob French,CAL,ACC,Batter,95.1,267218.0
+195,Late,Steele Murdock,UCSD,Big West,Pitcher,99.8,269999.0
+196,Late,Nick Locurto,VT,ACC,Batter,93.6,216759.0
+197,Late,Kai Wagner,PITT,ACC,Batter,94.7,109022.0
+198,Late,Mike Mancini,VAN,SEC,Batter,99.5,116674.0
+199,Late,Jacob Jarrell,CLEM,ACC,Batter,93.9,26288.0
+200,Late,AJ Nessler,PITT,ACC,Batter,99.5,157598.0
+201,Late,Jake Bennett,DBU,CUSA,Batter,95.0,280230.0
+202,Late,Zachary Peters,VCU,Atlantic 10,Pitcher,99.0,42169.0
+203,Late,Lee Amedee,UL,Sun Belt,Batter,95.3,149477.0
+204,Late,Isaac Cadena,USC,Big Ten,Batter,98.4,219622.0
+205,Late,Luis Becerra,CBU,WAC,Pitcher,99.6,135435.0
+206,Late,Ashton Larson,TEX,SEC,Batter,92.7,171424.0
+207,Late,Jason Walk,OU,SEC,Batter,98.4,267061.0
+208,Late,Drew Berkland,ND,ACC,Batter,99.6,99371.0
+209,Late,Nathan Leininger,TOL,MAC,Pitcher,98.0,39429.0
+210,Late,Dean Mihos,CCU,Sun Belt,Batter,93.3,202049.0
+211,Late,Evan Bottone,MRSH,Sun Belt,Batter,99.7,271587.0
+212,Late,Davis Gillespie,USM,Sun Belt,Batter,99.6,113901.0
+213,Late,Matt Bucciero,FAIR,MAAC,Batter,93.2,203570.0
+214,Late,Javar Williams,WAKE,ACC,Batter,99.9,97538.0
+215,Late,Ryan Castillo,UNM,Mountain West,Pitcher,94.2,181370.0
+216,Late,Camden Wimbish,CAM,CAA,Pitcher,96.3,163004.0
+217,Late,Jaxon Shineflew,USA,Sun Belt,Pitcher,90.5,181016.0
+218,Late,Cade Carr,SAM,SoCon,Batter,91.4,202023.0
+219,Late,Shane Sdao,TA&M,SEC,Pitcher,99.6,116818.0
+220,Late,Paul Vazquez,ORST,DI Independent,Batter,90.7,215263.0
+221,Late,Davin Whitaker,ECU,American,Batter,97.6,239949.0
+222,Late,Dean Toigo,ASU,Big 12,Batter,97.7,27516.0
+223,Late,Andrew Evans,SIU,MVC,Pitcher,98.9,47446.0
+224,Late,Brennan Hudson,UGA,SEC,Batter,97.7,107579.0
+225,Late,Tommy Harrison,M-OH,MAC,Batter,97.4,94616.0
+226,Late,Dylan Vigue,UGA,SEC,Pitcher,99.7,112052.0
+227,Late,Ethan Stade,BGSU,MAC,Pitcher,99.5,68827.0
+228,Late,Chase Frey,GCU,Mountain West,Pitcher,93.1,112796.0
+229,Late,John Damozonio,SMC,WCC,Pitcher,98.7,50428.0
+230,Late,Joe Sperry,MINN,Big Ten,Pitcher,97.8,113952.0
+231,Late,Matt Cuccias,WICH,American,Pitcher,92.5,141110.0
+232,Late,Aidan Weaver,DUKE,ACC,Pitcher,99.9,136806.0
+233,Late,Amp Phillips,SC,SEC,Pitcher,99.9,324475.0
+234,Late,Zack Stewart,ARK,SEC,Batter,97.9,136839.0
+235,Late,Landon Stump,UCLA,Big Ten,Pitcher,95.8,176042.0
+236,Late,Noah Sullivan,MSST,SEC,Batter,94.8,19898.0
+237,Late,Kolby Branch,UGA,SEC,Batter,93.6,16846.0
+238,Late,Mathis Nayral,KU,Big 12,Pitcher,98.5,125330.0
+239,Late,Cooper Williams,KENN,CUSA,Batter,91.3,164159.0
+240,Late,Stormy Rhodes,OKST,Big 12,Pitcher,96.5,176051.0
+241,Late,Maddox Molony,ORE,Big Ten,Batter,96.8,201726.0
+242,Late,Weston Moss,TA&M,SEC,Pitcher,99.7,115073.0
+243,Late,Kyeler Thompson,TTU,Big 12,Batter,96.2,139482.0
+244,Late,Joseph Webb,ECU,American,Pitcher,99.8,150859.0
+245,Late,Cole Selvig,MINN,Big Ten,Pitcher,97.6,248492.0
+246,Late,Cameron Gurney,UTAH,Big 12,Batter,92.8,96832.0
+247,Late,Ben Cleary,SCU,WCC,Batter,90.0,213754.0
+248,Late,Brady Miller,BC,ACC,Pitcher,99.2,249464.0
+249,Late,Mason Steele,UAB,American,Pitcher,98.7,171168.0
+250,Late,Ethan Gibson,VT,ACC,Batter,95.1,231924.0
+251,Late,Michael Anderson,PSU,Big Ten,Batter,98.0,213336.0
+252,Late,Tommy Egan,TROY,Sun Belt,Pitcher,97.4,37767.0
+253,Late,Manny Marin,TENN,SEC,Batter,96.0,300925.0
+254,Late,Wyatt Danilowicz,LOU,ACC,Pitcher,99.7,133055.0
+255,Late,Cody Brasch,UL,Sun Belt,Pitcher,98.2,120319.0
+256,Late,Justin Byrd,UGA,SEC,Pitcher,99.8,130684.0
+257,Late,Lincoln Sheffield,KSU,Big 12,Pitcher,97.3,116321.0
+258,Late,Colton Hartman,LOU,ACC,Pitcher,95.0,200725.0
+259,Late,Jayce Tharnish,UK,SEC,Batter,99.8,122451.0
+260,Late,Brandon Stone,SC,SEC,Pitcher,95.9,207688.0
+261,Late,Bryce Fowler,ALA,SEC,Batter,97.1,30730.0
+262,Late,Connor Shouse,TTU,Big 12,Batter,96.0,181827.0
+263,Late,Preston Crowl,VT,ACC,Pitcher,91.1,183277.0
+264,Late,Matt Scott,UGA,SEC,Pitcher,99.8,95377.0
+265,Late,Maloy Heaghney,UPST,Big South,Batter,92.7,126174.0
+266,Late,Connor Kelley,UTSA,American,Pitcher,98.4,114698.0
+267,Late,Blake Cyr,FLA,SEC,Batter,99.9,114842.0
+268,Late,Nick Barone,LIB,CUSA,Batter,98.5,95174.0
+269,Late,Micah Worley,STBK,CAA,Pitcher,99.8,123270.0
+270,Late,Ben Tryon,DBU,CUSA,Batter,95.4,140570.0
+271,Late,Mario Pesca,OKST,Big 12,Pitcher,98.8,146529.0
+272,Late,Weber Neels,MINN,Big Ten,Batter,97.2,25729.0
+273,Late,Jorsixt Jimenez,TNTC,OVC,Batter,95.7,26316.0
+274,Late,Ryan Gerety,NE,CAA,Batter,97.7,98631.0
+275,Late,Brandon McCraine,AUB,SEC,Batter,99.6,198917.0
+276,Late,Paul Schoenfeld,WVU,Big 12,Batter,98.7,25883.0
+277,Late,Nolan Souza,ARK,SEC,Batter,98.0,245881.0
+278,Late,TJ Pompey,ARK,SEC,Batter,97.0,307646.0
+279,Late,Dylan Carey,NEB,Big Ten,Batter,99.8,107212.0
+280,Late,Eli Pillsbury,JVST,CUSA,Pitcher,99.9,147111.0
+281,Late,Cade Baker,TOL,MAC,Batter,92.3,134813.0
+282,Late,Mikiah Negrete,CSUF,Big West,Pitcher,99.1,35589.0
+283,Late,Diego Castellanos,SMC,WCC,Batter,99.3,159063.0
+284,Late,Joseph Taylor,CLT,American,Pitcher,98.0,152771.0
+285,Late,Jet Gilliam,UTAH,Big 12,Batter,91.1,141704.0
+286,Late,Aidan Teel,MSST,SEC,Batter,93.1,188907.0
+287,Late,Steve Solorzano,NMSU,CUSA,Batter,92.3,263200.0
+288,Late,Benjamin Stubbs,TROY,Sun Belt,Pitcher,99.7,102645.0
+289,Late,Blake Grimmer,TENN,SEC,Batter,98.4,85492.0
+290,Late,Josh Swink,LIB,CUSA,Pitcher,97.4,174876.0
+291,Late,Cody Gunderson,CLT,American,Batter,96.5,110449.0
+292,Late,Ethan Lay,SAC,WAC,Pitcher,98.5,68346.0
+293,Late,Cole Fehrman,JOES,Atlantic 10,Pitcher,99.4,98357.0
+294,Late,Michael Addari,ILST,MVC,Pitcher,96.5,74716.0
+295,Late,Damian Ruiz,ARK,SEC,Batter,99.5,100791.0
+296,Late,Slade McCloud,TAR,WAC,Batter,94.4,10483.0
+297,Late,Travis Lutz,LAM,Southland,Pitcher,97.8,67797.0
+298,Late,Camden Wicker,UCF,Big 12,Pitcher,96.0,167012.0
+299,Late,Logan Rumberg,GMU,Atlantic 10,Pitcher,94.2,79171.0
+300,Late,Max Vaisvila,NIU,MAC,Pitcher,99.5,30761.0

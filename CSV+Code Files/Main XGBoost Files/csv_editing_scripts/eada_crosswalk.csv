@@ -1,0 +1,313 @@
+team,team_old,full_name,unitid,source,note,institution_name,state_cd
+AAMU,Alabama A&M,Alabama A&M University,100654,auto,,Alabama A & M University,AL
+ACU,Abilene Christian,Abilene Christian University,222178,auto,,Abilene Christian University,TX
+AFA,Air Force,United States Air Force Academy,,absent,"United States Air Force Academy - no Title IV participation, never files EADA",,
+AKR,Akron,University of Akron,200800,auto,,University of Akron Main Campus,OH
+ALA,Alabama,University of Alabama,100751,auto,,The University of Alabama,AL
+ALB,UAlbany,University at Albany,196060,auto,,SUNY at Albany,NY
+ALCN,Alcorn,Alcorn State University,175342,auto,,Alcorn State University,MS
+ALST,Alabama St.,Alabama State University,100724,auto,,Alabama State University,AL
+AMCC,A&M-Corpus Christi,Texas A&M University Corpus Christi,224147,auto,,Texas A & M University-Corpus Christi,TX
+APP,App State,Appalachian State University,197869,auto,,Appalachian State University,NC
+APSU,Austin Peay,Austin Peay State University,219602,auto,,Austin Peay State University,TN
+ARIZ,Arizona,University of Arizona,104179,auto,,University of Arizona,AZ
+ARK,Arkansas,University of Arkansas,106397,auto,,University of Arkansas,AR
+ARMY,Army West Point,United States Military Academy,,absent,"United States Military Academy - no Title IV participation, never files EADA",,
+ARST,Arkansas St.,Arkansas State University,106458,auto,,Arkansas State University,AR
+ASU,Arizona St.,Arizona State University,104151,name_override,,Arizona State University Campus Immersion,AZ
+AUB,Auburn,Auburn University,100858,auto,,Auburn University,AL
+BALL,Ball St.,Ball State University,150136,auto,,Ball State University,IN
+BAY,Baylor,Baylor University,223232,auto,,Baylor University,TX
+BC,Boston College,Boston College,164924,auto,,Boston College,MA
+BCU,Bethune-Cookman,Bethune–Cookman University,132602,auto,,Bethune-Cookman University,FL
+BEL,Belmont,Belmont University,219709,auto,,Belmont University,TN
+BELL,Bellarmine,Bellarmine University,156286,auto,,Bellarmine University,KY
+BGSU,Bowling Green,Bowling Green State University,201441,auto,,Bowling Green State University-Main Campus,OH
+BING,Binghamton,Binghamton University,196079,auto,,Binghamton University,NY
+BRAD,Bradley,Bradley University,143358,auto,,Bradley University,IL
+BRWN,Brown,Brown University,217156,auto,,Brown University,RI
+BRY,Bryant,Bryant University,217165,auto,,Bryant University,RI
+BUCK,Bucknell,Bucknell University,211291,auto,,Bucknell University,PA
+BUT,Butler,Butler University,150163,auto,,Butler University,IN
+BYU,BYU,Brigham Young University,230038,auto,,Brigham Young University,UT
+CAL,California,"University of California, Berkeley",110635,auto,,University of California-Berkeley,CA
+CAM,Campbell,Campbell University,198136,auto,,Campbell University,NC
+CAN,Canisius,Canisius,189705,auto,,Canisius College,NY
+CARK,Central Ark.,University of Central Arkansas,106704,auto,,University of Central Arkansas,AR
+CBU,California Baptist,California Baptist University,110361,auto,,California Baptist University,CA
+CCSU,Central Conn. St.,Central Connecticut State University,128771,auto,,Central Connecticut State University,CT
+CCU,Coastal Carolina,Coastal Carolina University,218724,auto,,Coastal Carolina University,SC
+CHSO,Charleston So.,Charleston Southern University,217688,auto,,Charleston Southern University,SC
+CIN,Cincinnati,University of Cincinnati,201885,auto,,University of Cincinnati-Main Campus,OH
+CIT,The Citadel,The Citadel Military College of South Carolina,217864,auto,,Citadel Military College of South Carolina,SC
+CLEM,Clemson,Clemson University,217882,auto,,Clemson University,SC
+CLT,Charlotte,University of North Carolina at Charlotte,199139,auto,,University of North Carolina at Charlotte,NC
+CMU,Central Mich.,Central Michigan University,169248,auto,,Central Michigan University,MI
+COFC,Col. of Charleston,College of Charleston,217819,auto,,College of Charleston,SC
+COLU,Columbia,Columbia University,190150,name_override,,Columbia University in the City of New York,NY
+CONN,UConn,University of Connecticut,129020,auto,,University of Connecticut,CT
+COPP,Coppin St.,Coppin State University,162283,auto,,Coppin State University,MD
+COR,Cornell,Cornell University,190415,auto,,Cornell University,NY
+CP,Cal Poly,California Polytechnic State University,110422,name_override,,California Polytechnic State University-San Luis Obispo,CA
+CREI,Creighton,Creighton University,181002,auto,,Creighton University,NE
+CSUB,CSU Bakersfield,"California State University, Bakersfield",110486,auto,,California State University-Bakersfield,CA
+CSUF,Cal St. Fullerton,"California State University, Fullerton",110565,auto,,California State University-Fullerton,CA
+CSUN,CSUN,"California State University, Northridge",110608,auto,,California State University-Northridge,CA
+DART,Dartmouth,Dartmouth College,182670,auto,,Dartmouth College,NH
+DAV,Davidson,Davidson College,198385,auto,,Davidson College,NC
+DAY,Dayton,University of Dayton,202480,auto,,University of Dayton,OH
+DBU,DBU,Dallas Baptist University,224226,auto,,Dallas Baptist University,TX
+DEL,Delaware,University of Delaware,130943,auto,,University of Delaware,DE
+DSU,Delaware St.,Delaware State University,130934,auto,,Delaware State University,DE
+DUKE,Duke,Duke University,198419,auto,,Duke University,NC
+ECU,East Carolina,East Carolina University,198464,auto,,East Carolina University,NC
+EIU,Eastern Ill.,Eastern Illinois University,144892,auto,,Eastern Illinois University,IL
+EKU,Eastern Ky.,Eastern Kentucky University,156620,auto,,Eastern Kentucky University,KY
+ELON,Elon,Elon University,198516,auto,,Elon University,NC
+EMU,Eastern Mich.,Eastern Michigan University,169798,auto,,Eastern Michigan University,MI
+ETSU,ETSU,East Tennessee State University,220075,auto,,East Tennessee State University,TN
+EVAN,Evansville,University of Evansville,150534,auto,,University of Evansville,IN
+FAIR,Fairfield,Fairfield University,129242,auto,,Fairfield University,CT
+FAMU,Florida A&M,Florida A&M University,133650,name_override,,Florida Agricultural and Mechanical University,FL
+FAU,Fla. Atlantic,Florida Atlantic University,133669,auto,,Florida Atlantic University,FL
+FDU,FDU,Fairleigh Dickinson University,184603,name_override,,Fairleigh Dickinson University-Metropolitan Campus,NJ
+FGCU,FGCU,Florida Gulf Coast University,433660,auto,,Florida Gulf Coast University,FL
+FIU,FIU,Florida International University,133951,auto,,Florida International University,FL
+FLA,Florida,University of Florida,134130,auto,,University of Florida,FL
+FOR,Fordham,Fordham University,191241,auto,,Fordham University,NY
+FRES,Fresno St.,Fresno State University,110556,name_override,,California State University-Fresno,CA
+FSU,Florida St.,Florida State University,134097,auto,,Florida State University,FL
+GASO,Ga. Southern,Georgia Southern University,139931,auto,,Georgia Southern University,GA
+GAST,Georgia St.,Georgia State University,139940,auto,,Georgia State University,GA
+GCU,Grand Canyon,Grand Canyon University,104717,auto,,Grand Canyon University,AZ
+GMU,George Mason,George Mason University,232186,auto,,George Mason University,VA
+GONZ,Gonzaga,Gonzaga University,235316,auto,,Gonzaga University,WA
+GRAM,Grambling,Grambling State University,159009,auto,,Grambling State University,LA
+GT,Georgia Tech,Georgia Institute of Technology,139755,auto,,Georgia Institute of Technology-Main Campus,GA
+GTWN,Georgetown,Georgetown University,131496,auto,,Georgetown University,DC
+GW,George Washington,George Washington University,131469,auto,,George Washington University,DC
+GWEB,Gardner-Webb,Gardner–Webb University,198561,auto,,Gardner-Webb University,NC
+HALL,Seton Hall,Seton Hall University,186584,auto,,Seton Hall University,NJ
+HART,Hartford,University of Hartford,129525,auto,,University of Hartford,CT
+HARV,Harvard,Harvard University,166027,auto,,Harvard University,MA
+HAW,Hawaii,University of Hawaii Manoa,141574,auto,,University of Hawaii at Manoa,HI
+HC,Holy Cross,College of the Holy Cross,166124,auto,,College of the Holy Cross,MA
+HCU,Houston Christian,Houston Christian University,225399,auto,,Houston Baptist University,TX
+HOF,Hofstra,Hofstra University,191649,auto,,Hofstra University,NY
+HOU,Houston,University of Houston,225511,auto,,University of Houston,TX
+HPU,High Point,High Point University,198695,auto,,High Point University,NC
+ILL,Illinois,University of Illinois,145637,name_override,,University of Illinois Urbana-Champaign,IL
+ILST,Illinois St.,Illinois State University,145813,auto,,Illinois State University,IL
+INST,Indiana St.,Indiana State University,151324,auto,,Indiana State University,IN
+IONA,Iona,Iona University,191931,auto,,Iona College,NY
+IOWA,Iowa,University of Iowa,153658,auto,,University of Iowa,IA
+IU,Indiana,Indiana University,151351,name_override,,Indiana University-Bloomington,IN
+JAX,Jacksonville,Jacksonville University,134945,auto,,Jacksonville University,FL
+JKST,Jackson St.,Jackson State University,175856,auto,,Jackson State University,MS
+JMU,James Madison,James Madison University,232423,auto,,James Madison University,VA
+JOES,Saint Joseph's,St. Joseph's University,215770,auto,,Saint Joseph's University,PA
+JVST,Jacksonville St.,Jacksonville State University,101480,auto,,Jacksonville State University,AL
+KENN,Kennesaw St.,Kennesaw State University,486840,auto,,Kennesaw State University,GA
+KENT,Kent St.,Kent State University,203517,name_override,,Kent State University at Kent,OH
+KSU,Kansas St.,Kansas St.,155399,name_override,,Kansas State University,KS
+KU,Kansas,University of Kansas,155317,auto,,University of Kansas,KS
+LAF,Lafayette,Lafayette College,213385,auto,,Lafayette College,PA
+LAM,Lamar University,Lamar University,226091,auto,,Lamar University,TX
+LAS,La Salle,La Salle University,213367,auto,,La Salle University,PA
+LBSU,Long Beach St.,Long Beach State University,110583,name_override,,California State University-Long Beach,CA
+LEH,Lehigh,Lehigh University,213543,auto,,Lehigh University,PA
+LEM,Le Moyne,Le Moyne College,192323,auto,,Le Moyne College,NY
+LIB,Liberty,Liberty University,232557,auto,,Liberty University,VA
+LIN,Lindenwood,Lindenwood University,177968,auto,,Lindenwood University,MO
+LIP,Lipscomb,Lipscomb University,219976,auto,,Lipscomb University,TN
+LIU,LIU,Long Island University,192448,auto,,Long Island University,NY
+LMU,LMU,Loyola Marymount University,117946,auto,,Loyola Marymount University,CA
+LONG,Longwood,Longwood University,232566,auto,,Longwood University,VA
+LOU,Louisville,University of Louisville,157289,auto,,University of Louisville,KY
+LR,Little Rock,Little Rock University,106245,name_override,,University of Arkansas at Little Rock,AR
+LSU,LSU,Louisiana State University,159391,name_override,,Louisiana State University and Agricultural & Mechanical College,LA
+LT,Louisiana Tech,Louisiana Tech University,159647,auto,,Louisiana Tech University,LA
+M-OH,Miami University-Ohio,Miami University-Ohio,204024,name_override,,Miami University-Oxford,OH
+MAN,Manhattan,Manhattan College,192703,auto,,Manhattan College,NY
+MASS,Massachusetts,University of Massachusetts Amherst,166629,auto,,University of Massachusetts-Amherst,MA
+MCN,McNeese,McNeese State University,159717,auto,,McNeese State University,LA
+MD,Maryland,University of Maryland,163286,name_override,,University of Maryland-College Park,MD
+ME,Maine,University of Maine,161253,auto,,University of Maine,ME
+MEM,Memphis,University of Memphis,220862,auto,,University of Memphis,TN
+MER,Mercer,Mercer University,140447,auto,,Mercer University,GA
+MERC,Mercyhurst,Mercyhurst University,213987,auto,,Mercyhurst University,PA
+MIA,University of Miami,University of Miami,135726,auto,,University of Miami,FL
+MICH,Michigan,University of Michigan,170976,name_override,,University of Michigan-Ann Arbor,MI
+MILW,Milwaukee,University of Wisconsin–Milwaukee,240453,auto,,University of Wisconsin-Milwaukee,WI
+MINN,Minnesota,University of Minnesota,174066,name_override,,University of Minnesota-Twin Cities,MN
+MISS,Ole Miss,University of Mississippi,176017,auto,,University of Mississippi,MS
+MIZ,Missouri,University of Missouri,178396,name_override,,University of Missouri-Columbia,MO
+MONM,Monmouth,Monmouth University,185572,auto,,Monmouth University,NJ
+MORE,Morehead St.,Morehead State University,157386,auto,,Morehead State University,KY
+MOST,Missouri St.,Missouri State University,179566,name_override,,Missouri State University-Springfield,MO
+MRMK,Merrimack,Merrimack College,166850,auto,,Merrimack College,MA
+MRSH,Marshall,Marshall University,237525,auto,,Marshall University,WV
+MRST,Marist,Marist College,192819,auto,,Marist College,NY
+MSM,Mount St. Mary's,Mount St. Mary's University,163462,auto,,Mount St. Mary's University,MD
+MSST,Mississippi St.,Mississippi State University,176080,auto,,Mississippi State University,MS
+MSU,Michigan St.,Michigan State University,171100,auto,,Michigan State University,MI
+MTSU,Middle Tenn.,Middle Tennessee State University,220978,auto,,Middle Tennessee State University,TN
+MUR,Murray St.,Murray State University,157401,auto,,Murray State University,KY
+MVSU,Mississippi Val.,Mississippi Valley State University,176044,auto,,Mississippi Valley State University,MS
+NAVY,Navy,United States Naval Academy,,absent,"United States Naval Academy - no Title IV participation, never files EADA",,
+NCAT,N.C. A&T,North Carolina A&T State University,199102,auto,,North Carolina A & T State University,NC
+NCCU,N.C. Central,North Carolina Central University,199157,auto,,North Carolina Central University,NC
+NCSU,NC State,North Carolina State University,199193,name_override,,North Carolina State University at Raleigh,NC
+ND,Notre Dame,University of Notre Dame,152080,auto,,University of Notre Dame,IN
+NDSU,North Dakota St.,North Dakota State University,200332,auto,,North Dakota State University-Main Campus,ND
+NE,Northeastern,Northeastern University,167358,auto,,Northeastern University,MA
+NEB,Nebraska,University of Nebraska–Lincoln,181464,auto,,University of Nebraska-Lincoln,NE
+NEV,Nevada,"University of Nevada, Reno",182290,auto,,University of Nevada-Reno,NV
+NIA,Niagara,Niagara University,193973,auto,,Niagara University,NY
+NICH,Nicholls,Nicholls State University,159966,auto,,Nicholls State University,LA
+NIU,NIU,University of Northern Illinois,147703,auto,,Northern Illinois University,IL
+NJIT,NJIT,New Jersey Institute of Technology,185828,auto,,New Jersey Institute of Technology,NJ
+NKU,Northern Ky.,Northern Kentucky University,157447,auto,,Northern Kentucky University,KY
+NMSU,New Mexico St.,New Mexico State University,188030,auto,,New Mexico State University-Main Campus,NM
+NORF,Norfolk St.,Norfolk State University,232937,auto,,Norfolk State University,VA
+NU,Northwestern,Northwestern University,147767,auto,,Northwestern University,IL
+NWST,Northwestern St.,Northwestern State University,160038,name_override,,Northwestern State University of Louisiana,LA
+OAK,Oakland,Oakland University,171571,auto,,Oakland University,MI
+ODU,Old Dominion,Old Dominion University,232982,auto,,Old Dominion University,VA
+OHIO,Ohio,Ohio University,204857,auto,,Ohio University-Main Campus,OH
+OKST,Oklahoma St.,Oklahoma State University,207388,auto,,Oklahoma State University-Main Campus,OK
+OMA,Omaha,University of Nebraska at Omaha,181394,auto,,University of Nebraska at Omaha,NE
+ORE,Oregon,University of Oregon,209551,auto,,University of Oregon,OR
+ORST,Oregon St.,Oregon State University,209542,auto,,Oregon State University,OR
+ORU,Oral Roberts,Oral Roberts University,207582,auto,,Oral Roberts University,OK
+OSU,Ohio St.,Ohio State University,204796,auto,,Ohio State University-Main Campus,OH
+OU,Oklahoma,University of Oklahoma,207500,name_override,,University of Oklahoma-Norman Campus,OK
+PAC,Pacific,University of the Pacific,120883,unitid_override,,University of the Pacific,CA
+PENN,Penn,University of Pennsylvania,215062,auto,,University of Pennsylvania,PA
+PEPP,Pepperdine,Pepperdine University,121150,auto,,Pepperdine University,CA
+PFW,Purdue Fort Wayne,Purdue Fort Wayne,151102,auto,,Purdue University Fort Wayne,IN
+PITT,Pittsburgh,University of Pittsburgh,215293,name_override,,University of Pittsburgh-Pittsburgh Campus,PA
+PORT,Portland,University of Portland,209825,name_override,,University of Portland,OR
+PRES,Presbyterian,Presbyterian College,218539,auto,,Presbyterian College,SC
+PRIN,Princeton,Princeton University,186131,auto,,Princeton University,NJ
+PSU,Penn St.,Penn State University,214777,name_override,,Pennsylvania State University-Main Campus,PA
+PSU,Penn St.,Penn State University,495767,name_override,,The Pennsylvania State University,PA
+PUR,Purdue,Purdue University,243780,auto,,Purdue University-Main Campus,IN
+PV,Prairie View,Prairie View A&M University,227526,auto,,Prairie View A & M University,TX
+QUC,Queens,Queens University of Charlotte,199412,auto,,Queens University of Charlotte,NC
+QUIN,Quinnipiac,Quinnipiac University,130226,auto,,Quinnipiac University,CT
+RAD,Radford,Radford University,233277,auto,,Radford University,VA
+RGV,UTRGV,University of Texas–Rio Grande Valley,227368,auto,,The University of Texas Rio Grande Valley,TX
+RICE,Rice,Rice University,227757,auto,,Rice University,TX
+RICH,Richmond,University of Richmond,233374,auto,,University of Richmond,VA
+RID,Rider,Rider University,186283,auto,,Rider University,NJ
+RUTG,Rutgers,Rutgers University,186380,name_override,,Rutgers University-New Brunswick,NJ
+SAC,Sacramento St.,Sacramento State University,110617,name_override,,California State University-Sacramento,CA
+SAM,Samford,Samford,102049,auto,,Samford University,AL
+SBU,St. Bonaventure,St. Bonaventure University,195164,auto,,St Bonaventure University,NY
+SC,South Carolina,University of South Carolina,218663,name_override,,University of South Carolina-Columbia,SC
+SCU,Santa Clara,Santa Clara University,122931,auto,,Santa Clara University,CA
+SDST,South Dakota St.,South Dakota State University,219356,auto,,South Dakota State University,SD
+SDSU,San Diego St.,San Diego State University,122409,auto,,San Diego State University,CA
+SEA,Seattle U,Seattle University,236595,auto,,Seattle University,WA
+SELA,Southeastern La.,Southeastern Louisiana University,160612,auto,,Southeastern Louisiana University,LA
+SEMO,Southeast Mo. St.,Southeast Missouri State University,179557,auto,,Southeast Missouri State University,MO
+SF,San Francisco,University of San Francisco,122612,auto,,University of San Francisco,CA
+SFA,SFA,Stephen F. Austin State University,228431,auto,,Stephen F Austin State University,TX
+SHSU,Sam Houston,Sam Houston State University,227881,auto,,Sam Houston State University,TX
+SHU,Sacred Heart,Sacred Heart University,130253,auto,,Sacred Heart University,CT
+SIE,Siena,Siena College,195474,auto,,Siena College,NY
+SIU,Southern Ill.,Southern Illinois University,149222,name_override,,Southern Illinois University-Carbondale,IL
+SIUE,SIUE,Southern Illinois University Edwardsville,149231,auto,,Southern Illinois University-Edwardsville,IL
+SJSU,San Jose St.,San Jose State University,122755,auto,,San Jose State University,CA
+SJU,St. John's,St. John's University,195809,name_override,,St. John's University-New York,NY
+SLU,Saint Louis,Saint Louis University,179159,auto,,Saint Louis University,MO
+SMC,Saint Mary's,St. Mary's College of California,123554,auto,,Saint Mary's College of California,CA
+SOU,Southern U.,Southern University and A&M College,160621,auto,,Southern University and A & M College,LA
+SPU,Saint Peter's,St. Peter's College,186432,name_override,,Saint Peter's University,NJ
+STAN,Stanford,Stanford University,243744,auto,,Stanford University,CA
+STBK,Stony Brook,Stony Brook University,196097,auto,,Stony Brook University,NY
+STET,Stetson,Stetson University,137546,auto,,Stetson University,FL
+STMN,St. Thomas (MN),"University of St. Thomas, Minnesota",174914,unitid_override,,University of St Thomas,MN
+STO,Stonehill,Stonehill College,167996,auto,,Stonehill College,MA
+TA&M,Texas A&M,Texas A&M University,228723,name_override,,Texas A & M University-College Station,TX
+TAR,Tarleton St.,Tarleton State University,228529,auto,,Tarleton State University,TX
+TCU,TCU,Texas Christian University,228875,auto,,Texas Christian University,TX
+TENN,Tennessee,University of Tennessee Knoxville,221759,auto,,The University of Tennessee-Knoxville,TN
+TEX,Texas,University of Texas at Austin,228778,auto,,The University of Texas at Austin,TX
+TNTC,Tennessee Tech,Tennessee Tech University,221847,name_override,,Tennessee Technological University,TN
+TOL,Toledo,University of Toledo,206084,auto,,University of Toledo,OH
+TOW,Towson,Towson University,164076,auto,,Towson University,MD
+TROY,Troy,Troy University,102368,auto,,Troy University,AL
+TTU,Texas Tech,Texas Tech University,229115,auto,,Texas Tech University,TX
+TULN,Tulane,Tulane University,160755,name_override,,Tulane University of Louisiana,LA
+TXSO,Texas Southern,Texas Southern University,229063,auto,,Texas Southern University,TX
+TXST,Texas St.,Texas State University,228459,auto,,Texas State University,TX
+UAB,UAB,University of Alabama at Birmingham,100663,auto,,University of Alabama at Birmingham,AL
+UAPB,Ark.-Pine Bluff,University of Arkansas at Pine Bluff,106412,auto,,University of Arkansas at Pine Bluff,AR
+UCD,UC Davis,"University of California, Davis",110644,auto,,University of California-Davis,CA
+UCF,UCF,University of Central Florida,132903,auto,,University of Central Florida,FL
+UCI,UC Irvine,"University of California, Irvine",110653,auto,,University of California-Irvine,CA
+UCLA,UCLA,"University of California, Los Angeles",110662,auto,,University of California-Los Angeles,CA
+UCR,UC Riverside,"University of California, Riverside",110671,auto,,University of California-Riverside,CA
+UCSB,UC Santa Barbara,"University of California, Santa Barbara",110705,auto,,University of California-Santa Barbara,CA
+UCSD,UC San Diego,"University of California, San Diego",110680,auto,,University of California-San Diego,CA
+UGA,Georgia,University of Georgia,139959,auto,,University of Georgia,GA
+UIC,UIC,University of Illinois at Chicago,145600,auto,,University of Illinois Chicago,IL
+UIW,UIW,University of the Incarnate Word,225627,auto,,University of the Incarnate Word,TX
+UK,Kentucky,University of Kentucky,157085,auto,,University of Kentucky,KY
+UL,Louisiana,University of Louisiana at Lafayette,160658,auto,,University of Louisiana at Lafayette,LA
+ULM,ULM,University of Louisiana at Monroe,159993,auto,,University of Louisiana at Monroe,LA
+UMBC,UMBC,"University of Maryland, Baltimore County",163268,auto,,University of Maryland-Baltimore County,MD
+UMES,UMES,University of Maryland Eastern Shore,163338,auto,,University of Maryland Eastern Shore,MD
+UML,UMass Lowell,University of Massachusetts Lowell,166513,auto,,University of Massachusetts-Lowell,MA
+UNA,North Ala.,University of North Alabama,101879,auto,,University of North Alabama,AL
+UNC,North Carolina,University of North Carolina at Chapel Hill,199120,auto,,University of North Carolina at Chapel Hill,NC
+UNCA,UNC Asheville,University of North Carolina at Asheville,199111,auto,,University of North Carolina at Asheville,NC
+UNCG,UNC Greensboro,University of North Carolina at Greensboro,199148,auto,,University of North Carolina at Greensboro,NC
+UNCO,Northern Colo.,University of Northern Colorado,127741,auto,,University of Northern Colorado,CO
+UNCW,UNCW,University of North Carolina at Wilmington,199218,auto,,University of North Carolina Wilmington,NC
+UNF,North Florida,University of North Florida,136172,auto,,University of North Florida,FL
+UNH,New Haven,University of New Haven,129941,auto,,University of New Haven,CT
+UNLV,UNLV,"University of Nevada, Las Vegas",182281,auto,,University of Nevada-Las Vegas,NV
+UNM,New Mexico,University of New Mexico,187985,auto,,University of New Mexico-Main Campus,NM
+UNO,New Orleans,University of New Orleans,159939,auto,,University of New Orleans,LA
+UPST,USC Upstate,University of South Carolina Upstate,218742,auto,,University of South Carolina-Upstate,SC
+URI,Rhode Island,University of Rhode Island,217484,auto,,University of Rhode Island,RI
+USA,South Alabama,University of South Alabama,102094,auto,,University of South Alabama,AL
+USC,Southern California,University of Southern California,123961,auto,,University of Southern California,CA
+USD,San Diego,University of San Diego,122436,auto,,University of San Diego,CA
+USF,South Fla.,University of South Florida,137351,auto,,University of South Florida,FL
+USI,Southern Ind.,University of Southern Indiana,151306,auto,,University of Southern Indiana,IN
+USM,Southern Miss.,University of Southern Mississippi,176372,auto,,University of Southern Mississippi,MS
+UTA,UT Arlington,University of Texas at Arlington,228769,auto,,The University of Texas at Arlington,TX
+UTAH,Utah,University of Utah,230764,auto,,University of Utah,UT
+UTM,UT Martin,University of Tennessee at Martin,221768,auto,,The University of Tennessee-Martin,TN
+UTSA,UTSA,University of Texas at San Antonio,229027,auto,,The University of Texas at San Antonio,TX
+UTU,Utah Tech,Utah Tech University,230171,auto,,Dixie State University,UT
+UVA,Virginia,University of Virginia,234076,auto,,University of Virginia-Main Campus,VA
+UVU,Utah Valley,Utah Valley University,230737,auto,,Utah Valley University,UT
+VAL,Valparaiso,Valparaiso University,152600,auto,,Valparaiso University,IN
+VAN,Vanderbilt,Vanderbilt University,221999,auto,,Vanderbilt University,TN
+VCU,VCU,Virginia Commonwealth University,234030,auto,,Virginia Commonwealth University,VA
+VILL,Villanova,Villanova University,216597,auto,,Villanova University,PA
+VMI,VMI,Virginia Military Institute,234085,auto,,Virginia Military Institute,VA
+VT,Virginia Tech,Virginia Tech,233921,name_override,,Virginia Polytechnic Institute and State University,VA
+W&M,William & Mary,College of William & Mary,231624,name_override,,William & Mary,VA
+WAG,Wagner,Wagner College,197197,auto,,Wagner College,NY
+WAKE,Wake Forest,Wake Forest University,199847,auto,,Wake Forest University,NC
+WASH,Washington,University of Washington,236948,name_override,,University of Washington-Seattle Campus,WA
+WCU,Western Caro.,Western Carolina University,200004,auto,,Western Carolina University,NC
+WES,West Georgia,University of West Georgia,141334,auto,,University of West Georgia,GA
+WICH,Wichita St.,Wichita State University,156125,auto,,Wichita State University,KS
+WIN,Winthrop,Winthrop University,218964,auto,,Winthrop University,SC
+WIU,Western Ill.,Western Illinois University,149772,auto,,Western Illinois University,IL
+WKU,Western Ky.,Western Kentucky University,157951,auto,,Western Kentucky University,KY
+WMU,Western Mich.,Western Michigan University,172699,auto,,Western Michigan University,MI
+WOF,Wofford,Wofford College,218973,auto,,Wofford College,SC
+WRST,Wright St.,Wright State University,206604,auto,,Wright State University-Main Campus,OH
+WSU,Washington St.,Washington State University,236939,auto,,Washington State University,WA
+WVU,West Virginia,West Virginia University,238032,auto,,West Virginia University,WV
+XAV,Xavier,Xavier University,206622,auto,,Xavier University,OH
+YALE,Yale,Yale University,130794,auto,,Yale University,CT
+YSU,Youngstown St.,Youngstown State University,206695,auto,,Youngstown State University,OH

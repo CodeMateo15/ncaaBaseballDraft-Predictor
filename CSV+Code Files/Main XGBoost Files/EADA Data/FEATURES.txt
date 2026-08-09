@@ -1,0 +1,312 @@
+================================================================================
+EADA PROGRAM-BUDGET FEATURES -- DATA DICTIONARY
+================================================================================
+
+Source data : Equity in Athletics Disclosure Act (EADA) survey, U.S. Dept. of Education
+              https://ope.ed.gov/athletics/
+Files       : EADA Data/EADA_All_Data_Combined_<AY>/EADA_<YYYY>.xlsx  (2021-2025)
+              One row per institution, ~4,275 columns. The .doc beside each workbook is
+              the raw SAS variable list (names and types only, no value labels).
+Produced by : csv_editing_scripts/add_team_eada.py
+              csv_editing_scripts/eada_names.py       (acronym -> IPEDS crosswalk)
+              csv_editing_scripts/eada_crosswalk.csv  (generated audit artifact)
+Consumed by : xgboostAllWithTeamsV7.ipynb, cell 9, list `eada_team_features`
+Output file : batting_pitching_combined_with_rpi_2026_eada.csv  (171 -> 183 columns)
+
+Every column below is baseball-specific EXCEPT the three `dept_` / `log_dept_` ones,
+which are department-wide totals across all men's sports. EADA does not break coach
+salary or recruiting spend out by sport -- only the `*_Baseball` source columns are
+sport-level. This matters for interpretation and belongs in any writeup.
+
+
+================================================================================
+1. YEAR ALIGNMENT
+================================================================================
+
+  EADA_<YYYY>.xlsx  ==  the academic year ENDING in <YYYY>  ==  the spring <YYYY> season
+
+so it maps 1:1 onto the dataset's integer `year` with NO lag. The folder name is the
+academic year ("EADA_All_Data_Combined_2024-2025"); the inner file is named for the
+ending year. File modification timestamps on disk are zip artifacts and are misleading --
+ignore them.
+
+Two independent checks established this:
+
+  (a) Reclassification timing. Schools that began Division I in a known academic year
+      first appear as D-I in the file for exactly that year:
+          Queens (NC) / Stonehill   D-I from 2022-23  ->  first D-I in EADA_2023
+          Le Moyne                  D-I from 2023-24  ->  first D-I in EADA_2024
+          West Georgia / Mercyhurst D-I from 2024-25  ->  first D-I in EADA_2025
+
+  (b) Roster-count lag test. PARTIC_MEN_Baseball vs. the actual batter count per team
+      per season from ncaa_battingNoMinCSV/batting_combined_all.csv:
+          lag  0  (season Y -> EADA_Y)      Pearson 0.216   Spearman 0.236
+          lag +1  (season Y -> EADA_Y+1)    Pearson 0.101   Spearman 0.123
+          lag -1  (season Y -> EADA_Y-1)    Pearson 0.094   Spearman 0.121
+      Lag 0 wins decisively. (Absolute r is modest because the no-minimum batting file
+      counts batters only, not the full roster; the comparison between lags is the point.)
+
+All five workbooks hold genuinely distinct data -- year-over-year exact equality on
+EXP_MEN_Baseball is under 1%, with median growth of +17% / +10% / +6% / +5%.
+
+
+================================================================================
+2. THE 2026 SEASON
+================================================================================
+
+There is no EADA file for 2025-26: institutions submit that survey by Oct 15, 2026 and
+it publishes the following spring. `add_team_eada.py` therefore carries 2025 forward:
+
+    CARRY_FORWARD = {2026: 2025}
+
+Verified: 298 of the 299 teams present in both seasons receive identical 2026 values.
+When EADA_2026.xlsx eventually lands, add 2026 to YEARS and delete the CARRY_FORWARD
+entry -- nothing else changes.
+
+WHY THE PERCENTILE FEATURES MATTER HERE. Baseball budgets inflate about 5%/yr, so a
+carried-forward raw-dollar figure would make every 2026 program look systematically
+poorer than the training years -- and 2026 is exactly the Stage-2/3 held-out year and
+the pre-draft simulation year. A program's budget *rank* is far more stable than its
+budget (year-over-year correlation 0.98), so the percentile columns survive the
+carry-forward unharmed. That is why `budget_pct_eada_team` exists alongside
+`log_budget_eada_team` rather than instead of it.
+
+
+================================================================================
+3. THE 12 FEATURE COLUMNS
+================================================================================
+
+Naming: descriptive name + `_eada_team`. The trailing `_team` is the project convention
+for team-level columns (matched by the notebook's `_team` detection in the SHAP cell);
+`eada` marks the provenance.
+
+Percentile universe: the `_pct_` columns rank against EVERY institution in that year's
+survey that sponsors baseball (~1,600 schools across D-I, D-II, D-III, NAIA and JUCO),
+not against D-I only. So a typical D-I program sits high in the range -- Penn State is at
+the 97th percentile -- and the columns are really measuring "how well resourced is this
+program relative to college baseball as a whole". That is the definition the A/B in
+section 5 was measured under; a D-I-only rank would be a different feature and would need
+re-measuring.
+
+--------------------------------------------------------------------------------
+budget_pct_eada_team
+  source : EXP_MEN_Baseball, percentile-ranked within the EADA reporting year
+  raw    : total expenses attributable to the men's baseball team -- operating expenses
+           plus everything else charged to the program (salaries, aid, recruiting, etc.)
+  why    : the headline program-spending signal, and the single most useful column here.
+           Ranked #2 of 155 features by gain in the Stage 2 model. The percentile form is
+           immune to budget inflation and is what makes the 2025->2026 carry-forward safe.
+
+log_budget_eada_team
+  source : log1p(EXP_MEN_Baseball)
+  why    : keeps the absolute scale that the percentile discards. A $12M program and a
+           $4M program can both sit in the 97th percentile; sometimes the gap matters.
+
+--------------------------------------------------------------------------------
+opex_per_player_pct_eada_team
+  source : OPEXPPERPART_MEN_Baseball, percentile-ranked within the reporting year
+  raw    : "operating (game-day) expenses per participant" -- travel, lodging, meals,
+           officials, uniforms, equipment. Excludes salaries and scholarships.
+  why    : how the program actually travels and plays, independent of its salary bill.
+           Distinguishes a well-run mid-major from one with an expensive coaching staff.
+
+log_opex_per_player_eada_team
+  source : log1p(OPEXPPERPART_MEN_Baseball)
+  why    : absolute scale for the same quantity.
+
+log_budget_per_player_eada_team
+  source : log1p(EXP_MEN_Baseball / PARTIC_MEN_Baseball)
+  why    : total spend per roster spot -- a resources-per-athlete measure that normalizes
+           away roster size. Different from opex-per-player because it includes salaries
+           and aid.
+
+roster_size_eada_team
+  source : PARTIC_MEN_Baseball, filtered to the plausible band [15, 75]
+  raw    : count of men's baseball participants as of the day of the first scheduled
+           contest
+  why    : roster size relative to spend; also a weak proxy for how deep a program carries
+           developmental players.
+  note   : a few institutions file one system-wide row that sums every branch campus,
+           which surfaces as an impossible roster -- Penn State reports 453 participants
+           in 2021 and 496 in 2022. No NCAA baseball roster runs past ~60, so values
+           outside [15, 75] are treated as unreported (NaN) rather than allowed to poison
+           log_budget_per_player_eada_team. This affects roughly 0.1% of team-seasons.
+
+--------------------------------------------------------------------------------
+log_revenue_eada_team
+  source : log1p(REV_MEN_Baseball)
+  raw    : revenue attributable to men's baseball. For most programs this is an allocated
+           figure that mirrors expenses; for a few it reflects real ticket/media income.
+  why    : separates the handful of programs that genuinely generate money from the
+           majority that are subsidized.
+
+net_revenue_eada_team
+  source : REV_MEN_Baseball - EXP_MEN_Baseball
+  why    : self-sustaining vs. subsidized. Reported in raw dollars, not logged, because
+           the sign carries the information and the magnitude is already bounded.
+
+coaching_staff_size_eada_team
+  source : MEN_TOTAL_HEADCOACH_Baseball + MEN_TOTAL_ASSTCOACH_Baseball (NaN treated as 0)
+  why    : headcount of the coaching and development staff -- how much individual
+           instruction a player plausibly receives. Moves independently of dollars.
+
+--------------------------------------------------------------------------------
+dept_recruiting_pct_eada_team
+  source : RECRUITEXP_MEN, percentile-ranked within the reporting year
+  raw    : recruiting expenses across ALL men's sports at the institution -- NOT
+           baseball-specific. EADA does not publish recruiting spend by sport.
+  why    : institution-level appetite for recruiting investment. Correlates with how far
+           a program will travel to sign a player, which is upstream of talent on the
+           roster in the first place.
+
+log_dept_recruiting_eada_team
+  source : log1p(RECRUITEXP_MEN)
+  why    : absolute scale for the same quantity. Same all-men's-sports caveat.
+
+log_dept_coach_salary_eada_team
+  source : log1p(HDCOACH_SAL_FTE_MEN)
+  raw    : average annual head-coach salary per full-time-equivalent position, across all
+           men's sports -- NOT baseball-specific.
+  why    : the pay level a department is willing to sustain, i.e. its ability to hire and
+           keep coaching talent. Same all-men's-sports caveat.
+
+
+================================================================================
+4. HOW THE JOIN WORKS, AND WHAT WILL BITE YOU
+================================================================================
+
+Key: the FanGraphs acronym (`team`), NOT `team_old`.
+     acronym -> EADA_NAME_OVERRIDES / normalized `Full Name_team` -> IPEDS unitid -> rows
+
+Coverage: 309 of the 312 crosswalk rows resolve; 98.8%-99.1% of player-rows per season.
+
+Traps found while building this, all of which are now guarded in code:
+
+  * `team_old` used to be WRONG for two pairs of schools -- Indiana/Indiana State and
+    Appalachian State/Coppin State each had the other's short name, so each carried the
+    other's conference, record, RPI and every other team-level column, in every season.
+    Found while building this block; fixed in standardized/team_name_mapping.csv and
+    repaired in the combined CSV by csv_editing_scripts/fix_swapped_team_identities.py.
+    The acronym was correct in every case, which is why this crosswalk keys on it.
+
+  * DO NOT filter EADA on classification_name containing "Division I".
+      - "Division I" is a substring of "Division II" and "Division III", so a naive
+        .str.contains matches 1,682 institutions instead of 348.
+      - Dallas Baptist files as D-II, Presbyterian files as "Other", and New Haven files
+        as D-II in 2025 while playing D-I baseball in 2026. Filtering on division
+        silently drops all three.
+    The script filters on PARTIC_MEN_Baseball > 0 instead.
+
+  * DO NOT strip the word "College" when normalizing names. It collapses
+    "University of Illinois" onto "Illinois College" and "Columbia University" onto
+    "Columbia College" -- silent wrong matches, not errors.
+
+  * Fold "A & M" / "A & T" to `aandm` / `aandt`, not `am` / `at`. Dropping the stopword
+    "at" afterwards would otherwise turn "North Carolina A&T State" into
+    "North Carolina State".
+
+  * An institution can hold more than one unitid over the period. Penn State files as
+    495767 ("The Pennsylvania State University") in 2021-22 and 214777 ("Pennsylvania
+    State University-Main Campus") from 2023. The crosswalk maps an acronym to a SET of
+    unitids so both are picked up.
+
+  * Conversely, 75 unitids change name mid-period (Dixie State -> Utah Tech, Houston
+    Baptist -> Houston Christian, Iona/Canisius College -> University, St. Peter's
+    College -> University). Joining on unitid rather than name handles these for free.
+
+  * Two institutions can normalize to the same key. "University of the Pacific" (120883,
+    CA, D-I) and "Pacific University" (209612, OR, D-III) both fold to "pacific"; the two
+    "University of St Thomas" records are 174914 (MN, D-I) and 227863 (TX, D-III). These
+    are pinned by IPEDS id in EADA_UNITID_OVERRIDES.
+
+Known non-matches, all correct:
+  AFA / ARMY / NAVY  -- the service academies do not participate in Title IV federal
+                        student aid and are therefore not required to file an EADA survey.
+                        They never appear in the data, in any year.
+  LAS (2026 only)    -- La Salle cut baseball in 2020 and reinstated it for 2026, so the
+                        2024-25 survey reports no baseball program to carry forward.
+
+Missing values are left as NaN. XGBoost handles them natively, which is how the rest of
+this pipeline already treats missing team data.
+
+
+================================================================================
+5. IS IT WORTH IT? (measured, not assumed)
+================================================================================
+
+--- 5a. THE REAL A/B: full V7 notebook, V7_EADA=0 vs V7_EADA=1 ---------------
+
+Same data file, same seeds, only the 12 columns differ (137 -> 149 features). Measured
+after the team-identity repair described in section 4, so these match what ships.
+
+  STAGE 1 -- "will this player be drafted?"
+    operational PR-AUC          0.7236  ->  0.7248     +0.0013
+    operational ROC-AUC         0.9481  ->  0.9488     +0.0007
+    precision @ 0.40 gate       0.3773  ->  0.3886     +0.0113
+    recall    @ 0.40 gate       0.9003  ->  0.9054     +0.0051
+
+  PRE-DRAFT SIMULATION (leakage-free, the number that matters most)
+    PR-AUC                      0.6139  ->  0.6257     +0.0118
+    Stage-2 Spearman on board   0.6781  ->  0.6891     +0.0110
+
+  2026 BOARD QUALITY -- of the top K names, how many were actually drafted
+    top-50      49/50  ->  49/50       0
+    top-100     88/100 ->  88/100      0
+    top-200    153/200 -> 150/200     -3
+    top-300    196/300 -> 191/300     -5
+    The board does not improve. The PR-AUC gain is in the ranking of the wider
+    population, not in the 300 names that actually make the board -- and the tail of
+    the board gives a little back.
+
+  STAGE 2 -- "where in the draft?"
+    order Spearman (2026)       0.6538  ->  0.6530     -0.0008
+    leave-one-year-out mean     0.5966  ->  0.6038     +0.0072
+
+  STAGE 3 -- bonus and slot
+    bonus R2                    0.2979  ->  0.2923     -0.0056
+    slot  R2                    0.1400  ->  0.1787     +0.0387
+  Both directions appear here across runs; treat Stage 3 as unmoved.
+
+--- 5b. MULTI-SEED CONFIRMATION -----------------------------------------------
+
+A single notebook run is one draw. The cell 4-9 pipeline was therefore also reproduced
+in a scratch harness (which matches the notebook's simulation baseline: 0.620 vs 0.616)
+and run over 10 undersampling seeds per cell, paired by seed:
+
+    test year   baseline    +EADA     paired delta   seeds won
+      2024       0.7013     0.7095      +0.0082        9/10
+      2025       0.7172     0.7258      +0.0086        8/10
+      2026       0.6203     0.6242      +0.0039        6/10
+                                        (PR-AUC)
+
+Stage 2, leave-one-year-out Spearman over the same harness:
+
+    variant     2021  2022  2023  2024  2025  2026    mean
+    baseline    .512  .631  .618  .675  .678  .655    .6283
+    + EADA      .502  .631  .621  .676  .688  .652    .6283
+
+Note: 5b was run before the team-identity repair. Both arms carried the same error, so the
+paired deltas remain valid; the absolute baselines shifted slightly afterwards.
+
+--- 5c. VERDICT ---------------------------------------------------------------
+
+The Stage 1 gain is real but small: roughly +0.001 to +0.012 PR-AUC (+0.2% to +1.9%
+relative), positive in 8 of 9 paired seed-tests and reproduced in the full notebook.
+The 2026 board itself does not get better -- the gain is in ranking the wider population,
+which is what PR-AUC measures, not in the top 300 names.
+
+Stage 2 is flat. The EADA block absorbs 14% of total feature gain and
+budget_pct_eada_team ranks #2 by importance, but it is SUBSTITUTING for signal that RPI,
+SOS and conference strength already carry rather than adding to it. Read that as:
+program wealth helps predict WHETHER a player gets drafted, not WHERE.
+
+Stage 3 moves slightly positive in the notebook run (slot R2 +0.04), but that is a
+single seed on 206 test rows and was flat in the multi-seed harness. Do not claim it.
+
+A trimmed 2-column version (budget percentile + log budget only) was also tested and is
+worth approximately zero (+0.0075 / +0.0000 / -0.0006 across the three test years). If
+you use this block at all, use all 12.
+
+The honest framing for a writeup: this is a new and independent DATA SOURCE -- the only
+block in the model not derived from on-field results -- with a small, consistently
+positive Stage-1 effect. It is not a performance headline.

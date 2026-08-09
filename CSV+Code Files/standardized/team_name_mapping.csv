@@ -31,7 +31,7 @@ team_id,division,team_old,team_new
 30,3,Anderson,Anderson
 31,2,Angelo St.,Angelo St.
 32,3,Anna Maria,Anna Maria
-33,1,App State,Coppin State University
+33,1,Coppin St.,Coppin State University
 34,3,Arcadia,Arcadia
 35,1,Arizona,University of Arizona
 36,1,Arizona St.,Arizona State University
@@ -204,7 +204,7 @@ team_id,division,team_old,team_new
 203,3,Concordia Wisconsin,Concordia Wisconsin
 204,3,Concordia-M'head,Concordia-M'head
 205,2,Concordia-St. Paul,Concordia-St. Paul
-206,1,Coppin St.,Appalachian State University
+206,1,App State,Appalachian State University
 207,1,Cornell,Cornell University
 208,3,Cornell College,Cornell College
 209,3,Cortland,Cortland
@@ -385,9 +385,9 @@ team_id,division,team_old,team_new
 384,3,Illinois Col.,Illinois Col.
 385,1,Illinois St.,Illinois State University
 386,3,Immaculata,Immaculata
-387,1,Indiana,Indiana State University
+387,1,Indiana St.,Indiana State University
 388,2,Indiana,Indiana
-389,1,Indiana St.,Indiana University
+389,1,Indiana,Indiana University
 390,1,Iona,Iona University
 391,1,Iowa,University of Iowa
 392,3,Iowa Wesleyan,Iowa Wesleyan
@@ -693,7 +693,7 @@ team_id,division,team_old,team_new
 692,2,Point Loma,Point Loma
 693,3,Polytechnic,Polytechnic
 694,3,Pomona-Pitzer,Pomona-Pitzer
-695,1,Portland,Portland State University
+695,1,Portland,University of Portland
 696,2,Post,Post
 697,1,Prairie View,Prairie View A&M University
 698,1,Presbyterian,Presbyterian College
@@ -1059,3 +1059,8 @@ team_id,division,team_old,team_new
 1058,1,Queens,Queens University of Charlotte
 1059,1,Stonehill,Stonehill College
 1060,1,Mercyhurst,Mercyhurst University
+1061,1,Lindenwood,Lindenwood University
+1062,1,St. Thomas (MN),"University of St. Thomas, Minnesota"
+1063,1,Southern Ind.,University of Southern Indiana
+1064,1,West Georgia,University of West Georgia
+1065,1,New Haven,University of New Haven

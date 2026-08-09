@@ -33,15 +33,16 @@ ncaaBaseballDraft-Predictor/
     ├── Main XGBoost Files/                    # PRIMARY RESEARCH ARTIFACT
     │   ├── xgboostAllWithTeamsV7.ipynb        # published pipeline (Stages 1–3 + scouting report)
     │   ├── xgboostAllWithTeamsV6_withRankFeature.ipynb   # prior version, retained
-    │   ├── batting_pitching_combined_with_rpi_public.csv # PUBLIC: final input matrix with FanGraphs columns stripped
-    │   ├── batting_pitching_combined_public.csv          # PUBLIC: same, pre-RPI merge
-    │   ├── batting_pitching_combined_with_rpi.csv        # PRIVATE (gitignored): full matrix, 92 features, paper §3.4 / Table 2
-    │   ├── batting_pitching_combined.csv                 # PRIVATE (gitignored): pre-RPI merge with FG columns
+    │   ├── batting_pitching_combined_with_rpi_public.csv # PUBLIC: input matrix, 173 cols, FG-derived metrics stripped
+    │   ├── batting_pitching_combined_with_rpi_2026_eada.csv # PRIVATE (gitignored): full matrix, 183 cols, paper §3.4 / Table 2
+    │   ├── batting_pitching_combined_with_rpi_2026.csv   # PRIVATE (gitignored): same, pre-EADA merge
     │   ├── emissions.csv                                 # CodeCarbon training-energy log
-    │   ├── csv_editing_scripts/                          # preprocessing (team-RPI merge, acronym fixes, column merging)
+    │   ├── csv_editing_scripts/                          # preprocessing (team-RPI merge, EADA merge, acronym fixes, public strip)
     │   ├── MLBStatsAPIDraftDataAccess/                   # MLB Stats API enrichment (per-player physicals, signing bonus, slot value)
     │   ├── mlb_draft_prospects/                          # MLB Pipeline top-250 scrape — Stage-2 benchmark (paper §3.7, §5.3)
     │   ├── ncaa_rpiYears/                                # Warren Nolan RPI tables — source of rpi_team, SOS_team, Q1–Q4 splits (Table 2)
+    │   ├── 2026 data/                                    # PRIVATE (gitignored): raw FanGraphs 2026 leaderboard exports
+    │   ├── EADA Data/                                    # EADA source workbooks (gitignored, ~100 MB/yr) + FEATURES.txt
     │   └── figures/                                      # publication figures (see mapping below)
     ├── ncaa_battingQualifiedCSV/        # FanGraphs batting (qualified PA) — CSVs gitignored, see folder DATA_NOTICE.md
     ├── ncaa_battingNoMinCSV/            # FanGraphs batting (no-min) — CSVs gitignored, see folder DATA_NOTICE.md
@@ -76,12 +77,28 @@ The mapping below mirrors Table 1 of the paper. All upstream collection is handl
 
 ## Data redistribution: public vs. private files
 
-FanGraphs' terms of use do not permit redistribution of their bulk leaderboard data. To respect that while keeping the repository runnable, this release uses a two-version layout:
+FanGraphs' terms of use do not permit redistribution of their bulk leaderboard data. To respect that while keeping the repository as reproducible as possible, this release uses a two-version layout:
 
-- **Private (gitignored, authors' machine only):** the raw FanGraphs CSVs in the four `ncaa_*CSV/` folders and the full combined matrices `batting_pitching_combined.csv` / `batting_pitching_combined_with_rpi.csv`. Each of the four raw-data folders contains a `DATA_NOTICE.md` instead of the CSVs in the public clone.
-- **Public (in the repo):** `batting_pitching_combined_public.csv` and `batting_pitching_combined_with_rpi_public.csv` — identical to the private originals but with every FanGraphs-sourced player-level column (every column ending in `_bat` or `_pitch`) removed. All identifiers, draft outcomes, the `role` column, and all team-level NCAA / Warren Nolan / RPI features are retained.
+- **Private (gitignored, authors' machine only):** the raw FanGraphs CSVs in the four `ncaa_*CSV/` folders and in `Main XGBoost Files/2026 data/`, plus the full combined matrices `batting_pitching_combined_with_rpi_2026.csv` / `..._2026_eada.csv`. Each of the four raw-data folders contains a `DATA_NOTICE.md` instead of the CSVs in the public clone.
+- **Public (in the repo):** `batting_pitching_combined_with_rpi_public.csv` — the private matrix with 10 columns removed and one re-keyed, leaving 173 of 183.
 
-The strip is reproducible via `Main XGBoost Files/csv_editing_scripts/make_public_data.py`. To run the published notebook end-to-end you need the private full matrix (or you can regenerate it using FanGraphs data). The public CSVs are sufficient to inspect schema, identifiers, targets, and team-level features.
+### Where the line falls, and why
+
+This repo applies the same rule as the `ncaa_bbStats` package, whose [`DATA_PROVENANCE.md`](https://github.com/CodeMateo15/CollegeBaseballStatsPackage/blob/main/DATA_PROVENANCE.md) sets out the reasoning in full. Facts about sporting events are not copyrightable in the United States (*Feist Publications v. Rural Telephone Service*, 499 U.S. 340 (1991)); what a compiler owns is its original selection, arrangement, and **derived analytics**. Two categories come out, and nothing else:
+
+**1. FanGraphs-derived metrics (9 columns dropped).** `fip_pitch`, `e-f_pitch`, `lob%_pitch`, `wrc_bat`, `wraa_bat`, `woba_bat`, `wrc+_bat`, `wsb_bat`, `spd_bat` — each computed from FanGraphs' own NCAA linear weights, league constants and park factors. That is their analytical product, not a fact.
+
+**2. FanGraphs identifiers.** `mlbamid` is dropped. `playerid` is FanGraphs' internal key (values like `sa3028661`), so it is **replaced in place** by an opaque surrogate (`p00001`, …) rather than removed — the notebook groups on it to count a player's eligibility seasons, and the public file needs *a* stable player key, just not FanGraphs'. The mapping is one-to-one and deterministic, so rows for the same player still group identically; the eligibility-season count is row-for-row identical to the private matrix across all 20,220 rows.
+
+The surrogate is internal to this file by design: it will **not** join to raw FanGraphs leaderboards, which still carry the `sa…` keys. The notebook's season-count cell supplements the modelling file with the no-minimum leaderboards for exactly that kind of lookup, and that step needs the private data anyway. Anyone with FanGraphs access should work from the private matrix; the public file is self-contained.
+
+**What is retained.** All 56 remaining player columns: the raw counting statistics (G, AB, PA, H, 1B–HR, BB, SO, IP, ER, …), which are records of what happened on the field, and the pure-arithmetic rates built from them — AVG, OBP, SLG, OPS, ISO, BABIP, BB%, K%, ERA, WHIP, K/9, BB/9, K-BB% — which reproduce exactly from those counts. Also retained: all draft outcomes, the `role` column, every team-level NCAA / Warren Nolan / RPI feature, and the 12 `*_eada_team` program-finance features (EADA is a U.S. federal government work and therefore public domain).
+
+No substitute metrics are computed to fill the nine gaps; this is a strip, not a substitution.
+
+**The honest caveat.** The retained counting statistics still *reach this repo* via a FanGraphs export, even though the underlying facts are not FanGraphs'. Re-deriving them directly from stats.ncaa.org individual-player pages would remove the dependency; until that lands, this is the accurate description of where the numbers came from.
+
+The strip is reproducible via `Main XGBoost Files/csv_editing_scripts/make_public_data.py`, which fails loudly if any expected column has been renamed upstream rather than silently shipping it.
 
 ---
 
@@ -99,7 +116,9 @@ For optional re-scraping of MLB Stats API data: `requests`, `tenacity`.
 
 ### 2. Data
 
-The notebook reads `batting_pitching_combined_with_rpi.csv` (the **private** full matrix) via a relative path from its own directory. This file is **not** in the public release — see the *Data redistribution* section above. To reproduce the paper's results you must either (a) have access to the authors' private working copy, or (b) regenerate the matrix from upstream sources via the `ncaa_bbStats` package (FanGraphs access required). The public `_public.csv` files are not a drop-in substitute — they lack the player-level features the model trains on.
+The notebook reads `batting_pitching_combined_with_rpi_2026.csv` (the **private** full matrix) via a relative path from its own directory. This file is **not** in the public release — see the *Data redistribution* section above. To reproduce the paper's results exactly you must either (a) have access to the authors' private working copy, or (b) regenerate the matrix from upstream sources via the `ncaa_bbStats` package (FanGraphs access required).
+
+`batting_pitching_combined_with_rpi_public.csv` gets you most of the way: it carries 56 of the 65 player-level columns, all identifiers, all targets, and every team-level feature, so the pipeline can be recreated against it. What it cannot reproduce is the contribution of the nine dropped FanGraphs-derived metrics, which the notebook does use as Stage-1 and Stage-2 features — expect the feature list to need trimming and the published numbers not to match. The pure-arithmetic rates are all present, so only genuinely FanGraphs-original signal is missing.
 
 ### 3. Run
 
@@ -107,13 +126,14 @@ Open `CSV+Code Files/Main XGBoost Files/xgboostAllWithTeamsV7.ipynb` in Jupyter 
 
 ### 4. Optional: rebuild the input matrix from raw sources
 
-If you want to regenerate `batting_pitching_combined_with_rpi.csv` from the FanGraphs CSVs and Warren Nolan RPI tables, the relevant scripts are in `CSV+Code Files/Main XGBoost Files/csv_editing_scripts/`:
+If you want to regenerate `batting_pitching_combined_with_rpi_2026_eada.csv` from the FanGraphs CSVs and Warren Nolan RPI tables, the relevant scripts are in `CSV+Code Files/Main XGBoost Files/csv_editing_scripts/`:
 
-- `merge_columns.py` — merge batting + pitching player-season CSVs
+- `merge_columns.py`, `build_2026_combined.py` — merge batting + pitching player-season CSVs
 - `add_rpi.py`, `add_team_rpi.py` — join team-level RPI/SOS/conference data from `ncaa_rpiYears/`
-- `fix_acronym_bugs.py` — repair team-name standardization issues (KSU, CAN, SAM, STBK, CARK, QUC)
+- `add_team_eada.py` — join the 12 EADA program-finance features (see `EADA Data/FEATURES.txt`)
+- `fix_acronym_bugs.py`, `fix_swapped_team_identities.py` — repair team-name standardization issues
 - `check_team_rpi.py` — validate team RPI mappings
-- `make_public_data.py` — produce `_public.csv` copies of the combined matrices with FanGraphs columns stripped (see *Data redistribution* above)
+- `make_public_data.py` — produce the public copy: drops the 9 FanGraphs-derived metrics and `mlbamid`, re-keys `playerid` (see *Data redistribution* above)
 
 The MLB Stats API draft enrichment lives separately in `MLBStatsAPIDraftDataAccess/enrich_draft_data.py` (and a simplified `enrich_draft_dataV2.py`).
 

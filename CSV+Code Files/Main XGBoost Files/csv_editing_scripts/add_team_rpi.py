@@ -115,6 +115,8 @@ TEAM_NAME_MAP = {
     "Sam Houston": "Sam Houston State",
     "Seattle U": "Seattle University",
     "South Fla.": "South Florida",
+    "Southern Ind.": "Southern Indiana",
+    "St. Thomas (MN)": "Saint Thomas",
     "Southeast Mo. St.": "Southeast Missouri",
     "Southeastern La.": "Southeastern Louisiana",
     "Southern California": "USC",

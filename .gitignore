@@ -20,10 +20,26 @@ __pycache__/
 .idea/
 
 # Private FanGraphs data (cannot redistribute under FG terms of use).
-# Public stripped copies live alongside as *_public.csv. See README.md.
+# The public copy is batting_pitching_combined_with_rpi_public.csv, built by
+# Main XGBoost Files/csv_editing_scripts/make_public_data.py. See README.md.
+
+# Raw leaderboard exports, 2021-2025
 CSV+Code Files/ncaa_battingQualifiedCSV/*.csv
 CSV+Code Files/ncaa_battingNoMinCSV/*.csv
 CSV+Code Files/ncaa_pitchingQualifiedCSV/*.csv
 CSV+Code Files/ncaa_pitchingNoMinCSV/*.csv
+
+# Raw leaderboard exports, 2026
+CSV+Code Files/Main XGBoost Files/2026 data/
+
+# Combined matrices carrying the FG player columns
 CSV+Code Files/Main XGBoost Files/batting_pitching_combined.csv
 CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi.csv
+CSV+Code Files/Main XGBoost Files/batting_pitching_combined_2026.csv
+CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi_2026.csv
+CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi_2026_eada.csv
+
+# EADA source workbooks: public domain, but ~100 MB per academic year. Only the
+# twelve derived *_eada_team features ship, inside the public matrix.
+# Re-download from https://ope.ed.gov/athletics/#/datafile/list
+CSV+Code Files/Main XGBoost Files/EADA Data/EADA_All_Data_Combined_*/
