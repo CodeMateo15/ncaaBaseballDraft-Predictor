@@ -4,6 +4,8 @@ Data, code, and figures supporting **Biggs & Gerber (2026), *Predicting MLB draf
 
 **Authors.** Mateo Biggs and Eric Gerber — Khoury College of Computer Sciences, Northeastern University.
 
+The draft model (using only public data, not private from the paper) powers a public site where you can browse a board, look up a player, or score a stat line of your own: https://codemateo15-ncaa-draft-app.share.connect.posit.cloud/
+
 The paper (`Predicting_MLB_draft_success__an_XGBoost_model_for_NCAA_baseball_players.pdf`, in the repo root) is the canonical reference for methods, results, and discussion. **This README documents repository layout and reproduction only.**
 
 ---
