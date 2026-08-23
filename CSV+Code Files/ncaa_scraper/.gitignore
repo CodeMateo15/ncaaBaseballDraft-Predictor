@@ -1,0 +1,15 @@
+# Scraped HTML and parsed rows. Regenerable; ~700 MB gzipped for 6 years of D1.
+cache/
+
+# Outputs are regenerable from cache/ in under a minute. Commit them
+# deliberately once they pass validate/, not automatically.
+out/
+
+# Downloaded bulk mirror files (~100 MB). Regenerable from MANIFEST.json, which
+# pins the exact commit SHA and sha256 of every one -- so the manifest is the
+# artefact worth committing, not the CSVs. `--verify-bulk` re-checks them.
+bulk_cache/
+!bulk_cache/MANIFEST.json
+
+__pycache__/
+*.pyc

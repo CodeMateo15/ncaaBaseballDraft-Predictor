@@ -423,9 +423,15 @@ def carried_over(df, before_flag, matches_by_year):
 # --------------------------------------------------------------------------------------
 # Verification
 # --------------------------------------------------------------------------------------
-def verify(df, other_before, before_flag, expected_cols, n_rows, matches_by_year, dup_before):
+def verify(df, other_before, before_flag, expected_cols, n_rows, matches_by_year, dup_before,
+           expect_columns=171):
     assert list(df.columns) == expected_cols, "column set or order changed"
-    assert len(expected_cols) == 171, f"expected the 171-column schema, got {len(expected_cols)}"
+    # The width is asserted, not inferred, so a truncated or double-merged input is
+    # caught before labels are written. It is a parameter because the public matrix
+    # is a different width (181: no age/mlbamid/decisions, plus class, person_id and
+    # the two qualification flags) while being the same shape otherwise.
+    assert len(expected_cols) == expect_columns, \
+        f"expected the {expect_columns}-column schema, got {len(expected_cols)}"
     start = expected_cols.index("Round")
     assert expected_cols[start:start + 5] == DRAFT_COLS, \
         f"draft columns are no longer contiguous: {expected_cols[start:start + 5]}"
@@ -551,6 +557,9 @@ def parse_args(argv):
     p.add_argument("--backup", type=Path, default=BACKUP)
     p.add_argument("--dry-run", action="store_true", help="report only; write no CSV")
     p.add_argument("--force", action="store_true", help="skip the per-year sanity range")
+    p.add_argument("--expect-columns", type=int, default=171,
+                   help="asserted column count of the input schema (171 for the "
+                        "private matrix, 181 for the public one)")
     return p.parse_args(argv)
 
 
@@ -601,7 +610,8 @@ def main(argv=None):
         })
 
     dup_after = verify(df, other_before, before_flag, expected_cols, n_rows,
-                       matches_by_year, dup_before)
+                       matches_by_year, dup_before,
+                       expect_columns=args.expect_columns)
     report(df, before, before_flag, matches_by_year, report_rows, carry_rows, dup_after)
 
     rep = pd.DataFrame(report_rows).sort_values(["year", "pick"], na_position="last")

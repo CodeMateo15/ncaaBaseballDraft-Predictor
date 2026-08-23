@@ -43,3 +43,6 @@ CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi_2026_eada.c
 # twelve derived *_eada_team features ship, inside the public matrix.
 # Re-download from https://ope.ed.gov/athletics/#/datafile/list
 CSV+Code Files/Main XGBoost Files/EADA Data/EADA_All_Data_Combined_*/
+
+# Paper LaTeX Material
+Paper LATEX Material/

@@ -246,8 +246,12 @@ def build_crosswalk(combined: pd.DataFrame, eada: pd.DataFrame) -> pd.DataFrame:
     return crosswalk.sort_values(["team", "unitid"]).reset_index(drop=True)
 
 
-def main():
-    combined = pd.read_csv(INPUT_PATH, low_memory=False)
+def main(input_path=None, output_path=None):
+    # Overridable for the public build; the crosswalk and CARRY_FORWARD logic are
+    # the parts worth reusing rather than reimplementing.
+    input_path = Path(input_path) if input_path else INPUT_PATH
+    output_path = Path(output_path) if output_path else OUTPUT_PATH
+    combined = pd.read_csv(input_path, low_memory=False)
     combined.columns = combined.columns.str.strip()
 
     eada = load_eada()
@@ -277,7 +281,7 @@ def main():
         f"Row count changed: {n_before} -> {len(merged)}"
     )
 
-    merged.to_csv(OUTPUT_PATH, index=False)
+    merged.to_csv(output_path, index=False)
 
     absent = crosswalk[crosswalk["source"] == "absent"]["team"].tolist()
     resolved_teams = crosswalk.loc[crosswalk["unitid"].notna(), "team"].nunique()
@@ -291,7 +295,9 @@ def main():
         carried = " (carried forward from %d)" % CARRY_FORWARD[year] if year in CARRY_FORWARD else ""
         print(f"  {year}: {rate:.1%} of {len(group):,} player-rows{carried}")
         assert rate >= MIN_MATCH_RATE, f"{year} match rate {rate:.1%} below {MIN_MATCH_RATE:.0%}"
-    print(f"\nWrote {OUTPUT_PATH.relative_to(ROOT)}")
+    # Print the path actually written, not the default -- the two differ whenever
+    # a caller overrides it, and reporting the default there is alarming.
+    print(f"\nWrote {output_path}")
 
 
 if __name__ == "__main__":

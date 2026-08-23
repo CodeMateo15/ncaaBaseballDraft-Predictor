@@ -8,7 +8,7 @@ RPI_DIR = ROOT / "ncaa_rpiYears"
 INPUT_PATH = ROOT / "batting_pitching_combined.csv"
 OUTPUT_PATH = ROOT / "batting_pitching_combined_with_rpi.csv"
 
-YEARS = [2021, 2022, 2023, 2024, 2025]
+YEARS = [2021, 2022, 2023, 2024, 2025, 2026]
 
 RENAME_HRN = {
     "H": "Home", "H_Wins": "Home_Wins", "H_Losses": "Home_Losses",
@@ -170,8 +170,13 @@ def load_rpi_year(year: int) -> pd.DataFrame:
     return df
 
 
-def main():
-    batting = pd.read_csv(INPUT_PATH)
+def main(input_path=None, output_path=None):
+    # Paths are overridable so the public build can reuse this exact join --
+    # TEAM_NAME_MAP is 120 hand-verified entries and must not be duplicated.
+    input_path = Path(input_path) if input_path else INPUT_PATH
+    output_path = Path(output_path) if output_path else OUTPUT_PATH
+
+    batting = pd.read_csv(input_path, low_memory=False)
     batting.columns = batting.columns.str.strip()
     batting["team_old"] = batting["team_old"].astype(str).str.strip()
 
@@ -198,14 +203,14 @@ def main():
         f"Row count changed: {n_before} -> {len(merged)} (possible duplicate Team+year in RPI data)"
     )
 
-    merged.to_csv(OUTPUT_PATH, index=False)
+    merged.to_csv(output_path, index=False)
 
     matched = merged["rpi_team"].notna().sum()
     unmatched = n_before - matched
     print(f"Input rows: {n_before}")
     print(f"Matched (got RPI data): {matched} ({matched / n_before:.1%})")
     print(f"Unmatched (NaN RPI):    {unmatched} ({unmatched / n_before:.1%})")
-    print(f"Wrote {OUTPUT_PATH.relative_to(ROOT)}")
+    print(f"Wrote {output_path}")
 
 
 if __name__ == "__main__":

@@ -1,8 +1,0 @@
-- Proportion predictor (bonus/slot)
-	- 1 means they got their slot amount, >1 means the team valued them very highly, and <1 means the team got them at a "discount" 
-
-- Grab top 250 prospects and include them into model
-
-- Make sure Journal of Sports Analytics, International Journal of Performance Analysis, or Journal of Quantitative Analysis in Sports is right choice
-
-- Write Paper
