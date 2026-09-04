@@ -1,7 +1,8 @@
 #!/bin/bash
 # Progress of the 2026 live scrape. Safe to run any time -- reads the cache and
 # the log only, and makes no network request.
-D="/Users/mateobiggs/ncaaBaseballDraft-Predictor/CSV+Code Files/ncaa_scraper/cache/d1/2026"
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+D="$HERE/cache/d1/2026"
 LOG=/tmp/scrape2026.log
 TOTAL=308
 

@@ -5,7 +5,7 @@
 `ncaa_bbStats` is installed on this machine, but not usably:
 
 1. Anaconda has an editable install (`__editable__.ncaa_bbstats-1.3.0.pth`) whose
-   only line points at `/Users/mateobiggs/CollegeBaseballStatsPackage/src` — a
+   only line points at `<local checkout of CollegeBaseballStatsPackage>/src` — a
    directory that no longer exists after the repo was renamed to `ncaa_bbStats`.
    `import ncaa_bbStats` fails outright there.
 2. `/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/ncaa_bbStats/`
@@ -21,7 +21,7 @@ whose provenance you cannot reconstruct from what you shipped. Vendoring makes
 
 ## Manifest
 
-Upstream: `/Users/mateobiggs/ncaa_bbStats` at git SHA `24b305085fab498d6566a35f00af4def7feec605`.
+Upstream: `ncaa_bbStats` (local checkout) at git SHA `24b305085fab498d6566a35f00af4def7feec605`.
 
 | local path | upstream path | upstream sha256 | change |
 |---|---|---|---|
@@ -50,7 +50,7 @@ population or the regression changed and needs explaining.
 ## Re-vendoring
 
 ```bash
-SRC=/Users/mateobiggs/ncaa_bbStats
+SRC=<path to your ncaa_bbStats checkout>
 cp $SRC/src/ncaa_bbStats/_normalize.py            mapping/_normalize.py
 cp $SRC/src/ncaa_bbStats/team_registry.py         mapping/team_registry.py   # then re-apply the data_path patch
 cp $SRC/src/data/registry/*.csv                   mapping/data/registry/

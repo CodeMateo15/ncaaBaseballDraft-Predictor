@@ -2,8 +2,8 @@
 .DS_Store
 
 # Jupyter
-.ipynb_checkpoints/
-.virtual_documents/
+**/.ipynb_checkpoints/
+**/.virtual_documents/
 
 # Python
 __pycache__/
@@ -18,6 +18,11 @@ __pycache__/
 # Editors
 .vscode/
 .idea/
+
+# Backups and run artifacts
+*.bak
+*.bak-*
+emissions.csv
 
 # Private FanGraphs data (cannot redistribute under FG terms of use).
 # The public copy is batting_pitching_combined_with_rpi_public.csv, built by
@@ -38,6 +43,9 @@ CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi.csv
 CSV+Code Files/Main XGBoost Files/batting_pitching_combined_2026.csv
 CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi_2026.csv
 CSV+Code Files/Main XGBoost Files/batting_pitching_combined_with_rpi_2026_eada.csv
+CSV+Code Files/archive/data/batting_pitching_combined.csv
+CSV+Code Files/archive/data/batting_pitching_combined_with_rpi.csv
+CSV+Code Files/archive/old_jupyterFiles/*DraftTable*.csv
 
 # EADA source workbooks: public domain, but ~100 MB per academic year. Only the
 # twelve derived *_eada_team features ship, inside the public matrix.

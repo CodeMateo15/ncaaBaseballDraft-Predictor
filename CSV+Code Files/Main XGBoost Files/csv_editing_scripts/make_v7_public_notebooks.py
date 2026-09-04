@@ -69,14 +69,14 @@ VARIANTS = {
         "data_file": "batting_pitching_combined_with_rpi_public_v2.csv",
         "fig_dir": "figures_v7_public",
         "run_tag": "public",
-        "note": "qualified population, reproducing the private matrix's ~17k rows",
+        "note": "qualified population, 20,763 rows (the private matrix has 16,728)",
     },
     "public_nomin": {
         "notebook": ROOT / "xgboostAllWithTeamsV7_public_nomin.ipynb",
         "data_file": "batting_pitching_combined_with_rpi_public_v2_nomin.csv",
         "fig_dir": "figures_v7_public_nomin",
         "run_tag": "public_nomin",
-        "note": "full no-minimum population, ~51k rows and a ~4% base rate",
+        "note": "full no-minimum population, 61,270 rows and a 4.2% base rate",
     },
 }
 
@@ -220,6 +220,48 @@ EDITS = [
          "        full_row['class_ord'] = class_ord; full_row['role'] = role_num"),
     (97, 'name=name or f"Custom {role} (age {age})",',
          'name=name or f"Custom {role} (class_ord {class_ord})",'),
+    # Keep two of the raw RPI columns the notebook otherwise discards after
+    # deriving the *_WP_team rates from them. Both carry information the rates
+    # do not -- NC_RPI_team is a national *rank*, Q1_Wins_team a *count* -- and
+    # the package's feature contract has always used them. Dropping them here
+    # while listing them as features is what raised
+    # KeyError: "['NC_RPI_team', 'Q1_Wins_team'] not in index".
+    (5, "'NC_Rec_Wins_team', 'NC_Rec_Losses_team', 'NC_RPI_team', 'NC_SOS_team',",
+        "'NC_Rec_Wins_team', 'NC_Rec_Losses_team', 'NC_SOS_team',"),
+    (5, "'Q1_Wins_team', 'Q1_Losses_team',", "'Q1_Losses_team',"),
+    # Derive the two package features that are not columns in the file.
+    # `Overall_WP_team` is wins over decided games, matching the other *_WP_team
+    # columns; WPCT_team is the published percentage and counts ties, so the two
+    # differ on the 1,457 rows that have one. `tb_bat` is exact from the hit
+    # breakdown, and is masked back to NaN for players who never batted so a
+    # pitcher does not get a real-looking 0.
+    (4, """for col in columns:
+    new_col = col.replace('_team', '') + '_WP_team'
+    df[new_col] = df[col].apply(calc_wp)""",
+        """for col in columns:
+    new_col = col.replace('_team', '') + '_WP_team'
+    df[new_col] = df[col].apply(calc_wp)
+
+_w = pd.to_numeric(df['W_team'], errors='coerce')
+_l = pd.to_numeric(df['L_team'], errors='coerce')
+df['Overall_WP_team'] = _w / (_w + _l).replace(0, np.nan)
+
+df['tb_bat'] = (df['1b_bat'].fillna(0) + 2 * df['2b_bat'].fillna(0)
+                + 3 * df['3b_bat'].fillna(0) + 4 * df['hr_bat'].fillna(0))
+df.loc[df['ab_bat'].isna(), 'tb_bat'] = np.nan"""),
+    # --- feature parity with the ncaa_bbStats package ------------------------
+    # Four columns the package's feature contract carries and V7 did not. Added
+    # so the notebook and the shipped model read an identical set; see
+    # ncaa_bbStats/src/ncaa_bbStats/features.py::model_features.
+    #
+    # These change the notebook's reported figures. That is the point -- the two
+    # were scoring the same data with different inputs -- but any paper figure
+    # generated before this must be regenerated.
+    (9, "rpi_team_features = ['rpi_team', 'SOS_team', 'Conference_Record_WP_team',",
+        "rpi_team_features = ['rpi_team', 'SOS_team', 'NC_RPI_team', 'Q1_Wins_team', "
+        "'Overall_WP_team', 'Conference_Record_WP_team',"),
+    (9, "'role', 'seasons_elapsed', 'first_class_ord', ",
+        "'role', 'seasons_elapsed', 'first_class_ord', 'tb_bat', "),
     # Simulation: eligibility basis constant, then the two blocks above.
     (107, "AGE_ELIGIBLE = 21", "CLASS_ELIGIBLE_ORD = 3        # junior or above"),
     (108, ELIG_V7, ELIG_PUBLIC),
@@ -291,9 +333,14 @@ def apply_edits(cells, variant):
         "# csv_editing_scripts/make_v7_public_notebooks.py. Do not hand-edit; edit\n"
         "# the generator so the diff against V7 stays re-derivable.\n"
         f"#   population: {variant['note']}\n"
-        "#   `age` -> `class_ord`, plus `first_class_ord` (69 player features,\n"
-        "#   151 total); eligibility counts seasons by person_id, not playerid.\n"
-        "#   2026 is absent: the public mirror stopped updating mid-season.\n\n"
+        "#   `age` -> `class_ord`, plus `first_class_ord` (70 player features,\n"
+        "#   155 total); eligibility counts seasons by person_id, not playerid.\n"
+        "#   The feature set is kept identical to the ncaa_bbStats package that\n"
+        "#   serves the draft app, so both read the same 155 columns from this\n"
+        "#   same file. See features.py::model_features.\n"
+        "#   2026 is present: scraped live from stats.ncaa.org 2026-08-22, all\n"
+        "#   308 D1 team-seasons. The public mirror is NOT used for it -- the\n"
+        "#   mirror stopped mid-season and understates at-bats by ~48/player.\n\n"
     )
     cells[2]["source"] = (header + source).splitlines(keepends=True)
     applied += 1
