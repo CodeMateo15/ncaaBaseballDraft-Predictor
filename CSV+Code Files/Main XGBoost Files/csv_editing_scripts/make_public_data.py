@@ -46,7 +46,7 @@ DATA_DIR = HERE.parent  # CSV+Code Files/Main XGBoost Files/
 # disk and is gitignored; the public copy is what gets committed and shared.
 FILES = [
     ("batting_pitching_combined_with_rpi_2026_eada.csv",
-     "batting_pitching_combined_with_rpi_public.csv"),
+     "../archive/data/batting_pitching_combined_with_rpi_public.csv"),
 ]
 
 # Category 1: metrics that depend on FanGraphs' linear weights, league

@@ -38,7 +38,7 @@ ROOT = HERE.parent
 
 DEFAULT_TARGETS = [
     ROOT / "batting_pitching_combined_with_rpi_2026_eada.csv",
-    ROOT / "batting_pitching_combined_with_rpi_public_v2.csv",
+    ROOT.parent / "archive" / "data" / "batting_pitching_combined_with_rpi_public_v2.csv",
     ROOT / "batting_pitching_combined_with_rpi_public_v2_nomin.csv",
 ]
 

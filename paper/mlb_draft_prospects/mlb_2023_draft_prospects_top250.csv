@@ -1,0 +1,251 @@
+rank,name,position,school,age,bats,throws,current_level
+1,Paul Skenes,RHP,Louisiana State,23,R,R,MLB
+2,Dylan Crews,OF,Louisiana State,24,R,R,AAA
+3,Wyatt Langford,OF,Florida,24,R,R,MLB
+4,Walker Jenkins,OF,South Brunswick (NC),21,L,R,AAA
+5,Max Clark,OF,Franklin (IN),21,L,L,AAA
+6,Rhett Lowder,RHP,Wake Forest,24,R,R,MLB
+7,Kyle Teel,C,Virginia,24,L,R,MLB
+8,Noble Meyer,RHP,Jesuit (OR),21,R,R,A+
+9,Chase Dollander,RHP,Tennessee,24,R,R,MLB
+10,Jacob Wilson,SS,Grand Canyon,24,R,R,MLB
+11,Arjun Nimmala,SS,Strawberry Crest (FL),20,R,R,AA
+12,Colin Houck,SS/3B,Parkview (GA),21,R,R,A+
+13,Aidan Miller,SS,Mitchell (FL),21,R,R,AAA
+14,Blake Mitchell,C,Sinton (TX),21,L,R,A+
+15,Brayden Taylor,INF,Texas Christian,23,L,R,AA
+16,Matt Shaw,INF,Maryland,24,R,R,MLB
+17,Tommy Troy,2B/OF,Stanford,24,R,R,AAA
+18,Jacob Gonzalez,INF,Mississippi,23,L,R,AAA
+19,Hurston Waldrep,RHP,Florida,24,R,R,MLB
+20,Yohandy Morales,1B/3B,Miami,24,R,R,AAA
+21,Enrique Bradfield Jr.,OF,Vanderbilt,24,L,L,AAA
+22,Chase Davis,OF,Arizona,24,L,L,AA
+23,Bryce Eldridge,1B,Madison (VA),21,L,R,MLB
+24,Thomas White,LHP,Phillips Academy (MA),21,L,L,AAA
+25,Brock Wilken,3B,Wake Forest,23,R,R,AAA
+26,Nolan Schanuel,1B,Florida Atlantic,24,L,R,MLB
+27,Dillon Head,OF,Homewood-Flossmoor (IL),21,L,L,A+
+28,Charlee Soto,RHP,Reborn Christian (FL),20,S,R,A+
+29,Colt Emerson,SS,Glenn (OH),20,L,R,AAA
+30,Walker Martin,SS/3B,Eaton (CO),22,L,R,A+
+31,George Lombard Jr.,INF,Gulliver Prep (FL),20,R,R,AAA
+32,Sammy Stafura,SS,Panas (NY),21,R,R,A+
+33,Kevin McGonigle,SS,Monsignor Bonner (PA),21,L,R,MLB
+34,Ralphy Velazquez,1B/OF,Huntington Beach (CA),20,L,R,AA
+35,Jake Gelof,3B,Virginia,24,R,R,AA
+36,Jack Hurley,OF,Virginia Tech,24,L,R,AAA
+37,Joe Whitman,LHP,Kent State,24,L,L,AA
+38,Adrian Santana,SS,Doral Academy (FL),20,S,R,A+
+39,Jonny Farmelo,OF,Westfield (VA),21,L,R,A+
+40,Travis Sykora,RHP,Round Rock (TX),22,R,R,AA
+41,Blake Wolters,RHP,Mahomet-Seymour (IL),21,R,R,A+
+42,Cameron Johnson,LHP,Oklahoma,21,L,L,
+43,Cole Schoenwetter,RHP,San Marcos (CA),21,R,R,A+
+44,Roch Cholowsky,SS,UCLA,21,R,R,
+45,Cooper Pratt,SS,Magnolia Heights (MS),21,R,R,AAA
+46,Mitch Jebb,OF/2B,Michigan State,23,L,R,AAA
+47,Cole Carrigg,OF,San Diego State,24,S,R,AAA
+48,Maui Ahuna,SS,Tennessee,24,L,R,AA
+49,Colton Ledbetter,OF,Mississippi State,24,L,R,AAA
+50,Alex Clemmey,LHP,Bishop Hendricken (RI),20,L,L,AA
+51,Paul Wilson,LHP,Lakeridge (OR),21,R,L,A
+52,Nazzan Zanetello,SS,Christian Brothers (MO),20,R,R,A+
+53,Tai Peete,OF,Trinity Christian (GA),20,L,R,A+
+54,Brandon Sproat,RHP,Florida,25,R,R,MLB
+55,Kemp Alderman,OF,Mississippi,23,R,R,AAA
+56,Hunter Owen,LHP,Vanderbilt,24,R,L,AA
+57,Brice Matthews,2B,Nebraska,24,R,R,MLB
+58,Ty Floyd,RHP,Louisiana State,24,R,R,A
+59,Cade Kuehler,RHP,Campbell,23,R,R,A+
+60,Steven Echavarria,RHP,Millburn (NJ),20,R,R,A+
+61,Travis Honeyman,OF,Boston College,24,R,R,AA
+62,LuJames Groover,3B,North Carolina State,24,R,R,AAA
+63,Alonzo Tredwell,RHP,UCLA,24,L,R,AA
+64,Myles Naylor,SS,St. Joan of Arc (ON),21,R,R,A+
+65,Kendall George,OF,Atascocita (TX),21,L,L,AA
+66,Jace Bohrofen,OF,Arkansas,24,L,R,AA
+67,Juaron Watts-Brown,RHP,Oklahoma State,24,R,R,AA
+68,Eric Bitonti,1B,Aquinas (CA),20,L,R,A+
+69,Roman Martin,3B,UCLA,21,R,R,
+70,Trent Caraway,3B,Louisiana State,22,R,R,
+71,George Wolkow,OF,Downers Grove North (IL),20,L,R,A+
+72,Landen Maroudis,RHP,Calvary Christian (FL),21,R,R,A+
+73,Zane Adams,LHP,Alabama,21,L,L,
+74,Brandon Winokur,SS/3B/OF,Edison (CA),21,R,R,A+
+75,Will Gasparino,OF,UCLA,21,R,R,
+76,Tanner Witt,RHP,Texas,23,R,R,A+
+77,Antonio Anderson,3B,North Atlanta (GA),20,S,R,A+
+78,Aidan Smith,OF,Lovejoy (TX),21,R,R,ROK
+79,Caden Sorrell,OF,Texas A&M,21,L,L,
+80,Joey Volchko,RHP,Georgia,20,R,R,
+81,Mike Boeve,1B/3B,Nebraska-Omaha,24,L,R,AA
+82,Mac Horvath,3B/2B,North Carolina,24,R,R,AA
+83,Zander Mueth,RHP,Belleville East (IL),20,R,R,A
+84,Teddy McGraw,RHP,Wake Forest,24,R,R,ROK
+85,Liam Peterson,RHP,Florida,20,R,R,
+86,Quinn Mathews,LHP,Stanford,25,L,L,AAA
+87,Josh Rivera,SS,Florida,25,R,R,AAA
+88,Grayson Hitt,LHP,Alabama,24,R,L,A
+89,Ryan Lasko,OF,Rutgers,23,R,R,AA
+90,Luke Keaschall,2B/OF/1B,Arizona State,23,R,R,MLB
+91,Max Anderson,2B/3B,Nebraska,24,R,R,AAA
+92,Tanner Hall,RHP,Southern Mississippi,24,R,R,A+
+93,Jake Brown,OF,Louisiana State,21,L,L,
+94,Homer Bush Jr.,OF,Grand Canyon,24,R,R,AAA
+95,Cole Foster,SS,Auburn,24,S,R,A+
+96,Levi Wells,RHP,Texas State,24,R,R,AAA
+97,Nolan McLean,RHP,Oklahoma State,24,R,R,MLB
+98,Josh Knoth,RHP,Patchogue-Medford (NY),20,R,R,ROK
+99,Grant Gray,OF,UCLA,21,R,R,
+100,Hunter Hollan,LHP,Arkansas,24,L,L,A
+101,Adam Hachman,LHP,Kentucky,21,L,L,
+102,Grant Taylor,RHP,Louisiana State,23,R,R,MLB
+103,Jaxon Wiggins,RHP,Arkansas,24,R,R,AAA
+104,Drew Burress,OF,Georgia Tech,21,R,R,
+105,Steven Milam,SS/2B,Louisiana State,21,S,R,
+106,Ethan McElvain,LHP,Arkansas,21,S,L,
+107,James Ellwanger,RHP,Dallas Baptist,21,R,R,A
+108,Seth Keener,RHP,Wake Forest,24,R,R,A+
+109,Luke McNeillie,RHP,Florida,21,L,R,
+110,Michael Carico,C,Davidson,23,L,R,A
+111,Dylan Cupp,SS,Mississippi State,21,R,R,
+112,Wyatt Crowell,LHP,Florida State,24,L,L,AA
+113,Alberto Rios,C,Stanford,24,R,R,AAA
+114,Alex Mooney,INF,Duke,23,R,R,AA
+115,Jared Dickey,OF,Tennessee,24,L,R,AA
+116,Garret Forrester,1B/3B/C,Oregon State,24,R,R,AA
+117,Brock Vradenburg,1B,Michigan State,24,L,R,A+
+118,Caden Grice,LHP,Clemson,23,L,L,A+
+119,Spencer Nivens,OF,Missouri State,24,L,R,AA
+120,Jack Mahoney,RHP,South Carolina,24,R,R,AA
+121,Cole Miller,RHP,Newbury Park (CA),21,R,R,A
+122,Julian Brock,C,Louisiana-Lafayette,24,R,R,AA
+123,Sean Sullivan,LHP,Wake Forest,23,R,L,AAA
+124,Andrew Walters,RHP,Miami,25,R,R,AAA
+125,Alex Sosa,C,Miami,21,L,R,
+126,Barrett Kent,RHP,Pottsboro (TX),21,R,R,A
+127,Kiefer Lord,RHP,Washington,23,R,R,A+
+128,Justin Lee,RHP,UCLA,20,R,R,
+129,Carson Roccaforte,OF,Louisiana-Lafayette,24,L,L,AA
+130,Roc Riggio,2B,Oklahoma State,23,L,R,AA
+131,Parker Detmers,RHP,Louisville,21,R,R,
+132,Carson Rucker,SS/3B,Goodpasture Christian (TN),21,R,R,A
+133,Calvin Harris,C,Mississippi,24,L,R,AA
+134,Wil Libbert,LHP,Mississippi,21,L,L,
+135,Will Sanders,RHP,South Carolina,24,L,R,AAA
+136,Kyle Karros,3B,UCLA,23,R,R,MLB
+137,Tre' Morgan,1B/OF,Louisiana State,23,L,L,AAA
+138,Brady Smith,RHP,Grainger (TN),21,R,R,A
+139,Colin Fisher,LHP,Arkansas,21,L,L,
+140,Ross Dunn,LHP,Arizona State,24,R,L,A+
+141,Hunter Dietz,LHP,Arkansas,21,R,L,
+142,Kade Morris,RHP,Nevada,23,R,R,AAA
+143,Camden Kozeal,SS/2B,Arkansas,21,L,R,
+144,Zion Rose,OF,Louisville,20,R,R,
+145,Garrett Baumann,RHP,Hagerty (FL),21,L,R,AA
+146,Gavin Grahovac,1B,Texas A&M,21,R,R,
+147,Jake Cunningham,OF,Charlotte,23,R,R,A+
+148,Jack Payton,C,Louisville,24,R,R,AA
+149,Cameron Flukey,RHP,Coastal Carolina,21,R,R,
+150,Cam Clayton,SS,Washington,23,R,R,A+
+151,CJ Kayfus,1B/OF,Miami,24,L,L,AAA
+152,Sabin Ceballos,3B,Oregon,23,R,R,AA
+153,Ethan O'Donnell,OF,Virginia,24,L,R,AAA
+154,Cal Fisher,SS/2B,Florida State,21,R,R,
+155,Campbell Smithwick,C,Oklahoma State,20,L,R,
+156,Tavian Josenberger,OF,Arkansas,24,L,R,AA
+157,Christian Knapczyk,SS,Louisville,24,L,R,AA
+158,Blake Dickerson,LHP,Ocean Lakes (VA),21,L,L,ROK
+159,Gabe Gaeckle,RHP,Arkansas,21,R,R,
+160,Camden Minacci,RHP,Wake Forest,24,R,R,AA
+161,Jonah Cox,OF,Oral Roberts,24,R,R,AA
+162,Chance Mako,RHP,Coastal Carolina,21,R,R,
+163,Nick Goodwin,SS,Kansas State,24,R,R,AA
+164,Connor O'Halloran,LHP,Michigan,23,R,L,A+
+165,Zach Thornton,LHP,Grand Canyon,24,L,L,AAA
+166,Ixan Henderson,LHP,Fresno State,24,L,L,AAA
+167,Jackson Baumeister,RHP,Florida State,23,R,R,AA
+168,TJayy Walton,OF,IMG Academy (FL),21,R,R,ROK
+169,Connor Burns,C,Long Beach State,24,R,R,AA
+170,Luke Shliger,C,Maryland,24,L,R,A+
+171,Dylan Campbell,OF,Texas,23,R,R,AA
+172,Andrew Lindsey,RHP,Tennessee,26,R,R,A+
+173,Lebarron Johnson Jr.,RHP,Texas,23,R,R,A+
+174,Kyle Carr,LHP,Palomar JC,24,L,L,AA
+175,Nicholas Judice,RHP,Louisiana-Monroe,25,R,R,A
+176,Josh Bostick,RHP,Grayson JC,24,R,R,A+
+177,Kehden Hettiger,C/1B,Sierra Canyon (CA),21,L,R,AA
+178,Jake Bloss,RHP,Georgetown,24,R,R,ROK
+179,Bishop Letson,RHP,Floyd Central (IN),21,R,R,AA
+180,Kevin Sim,1B/OF,San Diego,24,R,R,A+
+181,Jacob Gholston,RHP,Charlotte,21,R,R,
+182,Devin Saltiban,OF/2B,Hilo (HI),21,R,R,A+
+183,Tate McGuire,RHP,Arkansas,21,R,R,
+184,Cade Denton,RHP,Oral Roberts,24,R,R,AA
+185,Justin Storm,LHP,Southern Mississippi,24,R,L,A+
+186,Joe Vetrano,1B,Boston College,24,L,L,AA
+187,Jake Peppers,RHP,Jacksonville State,24,R,R,A+
+188,Hunter Haas,SS,Texas A&M,24,R,R,A+
+189,Isaiah Coupet,LHP,Ohio State,23,L,L,ROK
+190,George Klassen,RHP,Minnesota,24,R,R,AAA
+191,Cam Brown,RHP,Texas Christian,24,R,R,A+
+192,Hunter Furtado,LHP,Alabama,24,R,L,A+
+193,Aidan Knaak,RHP,Clemson,21,R,R,
+194,Dylan Questad,RHP,Waterford (WI),21,R,R,A
+195,Coleman Picard,RHP,Bryant,24,R,R,A+
+196,Carlson Reed,RHP,West Virginia,23,L,R,A+
+197,Khristian Curtis,RHP,Arizona State,24,R,R,AA
+198,Nathan Dettmer,RHP,Texas A&M,24,R,R,A+
+199,Jason Savacool,RHP,Maryland,23,R,R,A+
+200,Drue Hackenberg,RHP,Virginia Tech,24,R,R,ROK
+201,Olin Johnson,RHP,North Carolina,21,R,R,
+202,Matthew Dallas,LHP,Wake Forest,21,L,L,
+203,Andrew Duncan,OF,Florida State,21,R,R,
+204,Zach Levenson,OF,Miami,24,R,R,AA
+205,Ryder Helfrick,C,Arkansas,21,R,R,
+206,Aidan Keenan,RHP,Stanford,21,R,R,
+207,Cole Stokes,RHP,Florida State,21,R,R,
+208,Cam Tilly,RHP,Auburn,21,R,R,A
+209,Kannon Kemp,RHP,Weatherford (TX),21,R,R,A+
+210,Cam Fisher,OF,Charlotte,24,L,R,A
+211,Carson Montgomery,RHP,Florida State,23,R,R,A+
+212,Alejandro Rosario,RHP,Miami,24,R,R,AA
+213,J.D. Gonzalez,C,Anita Otero Hernandez (PR),20,L,R,A+
+214,Kollin Ritchie,OF,Oklahoma State,21,L,R,
+215,Colton Hartman,LHP,Louisville,21,L,L,
+216,Andrew Pinckney,OF,Alabama,25,R,R,AAA
+217,Colin Barczi,C,Vanderbilt,21,R,R,
+218,Jaden Hamm,RHP,Middle Tennessee State,23,R,R,AA
+219,Patrick Reilly,RHP,Vanderbilt,24,R,R,AA
+220,Drew Conover,RHP,Rutgers,24,R,R,A+
+221,Carter Graham,1B,Stanford,24,R,R,A+
+222,Nolan Souza,SS,Arkansas,20,L,R,
+223,Daniel Cuvet,3B,Miami,20,R,R,
+224,Boston Baro,INF,Capistrano Valley (CA),21,L,R,A+
+225,Christian Oppor,LHP,Gulf Coast State JC,21,L,L,AA
+226,Phoenix Call,SS/OF,UCLA,21,R,R,
+227,Logan Van Treeck,LHP,Lipscomb,25,L,L,A
+228,Emmett Olson,LHP,Nebraska,23,L,L,A+
+229,Matthew Etzel,OF,Southern Mississippi,24,L,R,AAA
+230,Josh Grosz,RHP,East Carolina,23,R,R,AA
+231,Owen Wild,RHP,Gonzaga,23,R,R,AA
+232,Cooper Ingle,C,Clemson,24,L,R,AAA
+233,Ryan Bruno,LHP,Stanford,24,L,L,A
+234,Hiro Wyatt,RHP,Staples (CT),21,R,R,A
+235,Joseph Gonzalez,RHP,Auburn,24,R,R,
+236,Jaden Woods,LHP,Georgia,24,L,L,AA
+237,Ryan Brown,RHP,Ball State,23,R,R,A+
+238,Tommy Hawke,OF,Wake Forest,23,L,R,A+
+239,TJ Nichols,RHP,Arizona,23,R,R,ROK
+240,Eriq Swan,RHP,Middle Tennessee State,24,R,R,AA
+241,Jay Driver,RHP,Harvard,24,R,R,AA
+242,Gavin Adams,RHP,Florida State,23,R,R,A
+243,John Peck,SS,Pepperdine,23,R,R,AA
+244,Dean Curley,INF,Tennessee,22,R,R,A+
+245,Trevor Harrison,RHP,Mitchell (FL),20,R,R,A+
+246,Christian Rodriguez,RHP,Florida,20,R,R,
+247,Cameron Kim,3B,UCLA,21,R,R,
+248,Paulshawn Pasqualotto,RHP,California,24,R,R,A+
+249,Derek Schaefer,RHP,Arizona State,20,R,R,
+250,Nigel Belgrave,RHP,Maryland,24,R,R,AA

@@ -1,16 +1,21 @@
 """Generate the public-data variants of xgboostAllWithTeamsV7.ipynb.
 
+Step 1 of 2 in building the shipping notebook. All three files here are
+superseded intermediates and live in `archive/old_jupyterFiles/`; step 2 is
+`apply_app_stage1.py`, which turns the no-minimum variant into the notebook the
+paper actually reports, `draft_model.ipynb`.
+
 Two outputs, differing only in which public matrix they read:
 
     xgboostAllWithTeamsV7_public.ipynb        qualified population  (17,105 rows)
     xgboostAllWithTeamsV7_public_nomin.ipynb  no-minimum population (50,836 rows)
 
-Generated rather than hand-edited so the diff against the published V7 stays
-visible and re-derivable: V7 is the paper's notebook, and a public variant that
-had silently drifted from it would be worse than no variant. Every edit below is
-declared as an exact (cell, old, new) triple and asserted to apply exactly once,
-so a change to V7 that invalidates one of them fails here instead of producing a
-subtly different notebook.
+Generated rather than hand-edited so the diff against the private original stays
+visible and re-derivable: a public variant that had silently drifted from it
+would be worse than no variant. Every edit below is declared as an exact
+(cell, old, new) triple and asserted to apply exactly once, so a change upstream
+that invalidates one of them fails here instead of producing a subtly different
+notebook.
 
 What actually changes, and why:
 
@@ -61,18 +66,22 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 
-SOURCE = ROOT / "xgboostAllWithTeamsV7.ipynb"
+# The V7 originals and the intermediate public variants are superseded by
+# draft_model.ipynb and live in the archive; only the final notebook ships.
+ARCHIVE = ROOT.parent / "archive" / "old_jupyterFiles"
+
+SOURCE = ARCHIVE / "xgboostAllWithTeamsV7.ipynb"
 
 VARIANTS = {
     "public": {
-        "notebook": ROOT / "xgboostAllWithTeamsV7_public.ipynb",
+        "notebook": ARCHIVE / "xgboostAllWithTeamsV7_public.ipynb",
         "data_file": "batting_pitching_combined_with_rpi_public_v2.csv",
         "fig_dir": "figures_v7_public",
         "run_tag": "public",
         "note": "qualified population, 20,763 rows (the private matrix has 16,728)",
     },
     "public_nomin": {
-        "notebook": ROOT / "xgboostAllWithTeamsV7_public_nomin.ipynb",
+        "notebook": ARCHIVE / "xgboostAllWithTeamsV7_public_nomin.ipynb",
         "data_file": "batting_pitching_combined_with_rpi_public_v2_nomin.csv",
         "fig_dir": "figures_v7_public_nomin",
         "run_tag": "public_nomin",

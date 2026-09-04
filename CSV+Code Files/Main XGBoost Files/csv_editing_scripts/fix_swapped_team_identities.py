@@ -43,7 +43,7 @@ TARGETS = [
     # The redistributable copy carries the same team-level columns, so it carries the same
     # error. (It is also stale for unrelated reasons -- 2021-2025 only, pre-relabel -- but
     # that is a separate regeneration.)
-    ROOT / "batting_pitching_combined_with_rpi_public.csv",
+    ROOT.parent / "archive" / "data" / "batting_pitching_combined_with_rpi_public.csv",
 ]
 
 # (acronym_a, acronym_b) whose team-level columns are exchanged, plus the conference(s) each

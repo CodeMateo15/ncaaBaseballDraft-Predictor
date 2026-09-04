@@ -27,7 +27,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PAPER_BOARD = HERE.parent / "2026_simulated_board_v7.csv"
+PAPER_BOARD = HERE.parent.parent / "archive" / "data" / "2026_simulated_board_v7.csv"
 
 try:
     import pandas as pd

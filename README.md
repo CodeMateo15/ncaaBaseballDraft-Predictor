@@ -1,5 +1,7 @@
 # Predicting the MLB Draft from Public NCAA Data
 
+TLDR: Go to paper/ folder and run the notebook there
+
 A college baseball player deciding whether to enter the MLB Draft wants to know three things: will they be drafted, where will they go, and what will they be paid. Existing college baseball and MLB Draft modeling relies on data that cannot be readily redistributed or reproduced: the sabermetric leaderboards most college baseball work relies on are not free, so results cannot be checked by the public. The first contribution of this work is to construct and validate a public NCAA-derived dataset, consisting of 61,270 Division~I player-seasons from 2021 through 2026 (every player with any playing time), of whom 2,565 (4.19%) were drafted.
 
 We then use MLB Draft prediction as a substantive benchmark of what can, and cannot, be inferred from public performance data alone. The headline test is a 2026 draft board built with no hindsight: every model retrained on 2021--2025 alone, every field that exists only after a player is drafted removed, and all 10,434 2026 player-seasons ranked from scratch. Of the top 50 names, 48 were actually drafted, matching MLB Pipeline's college-only top 50. Our board runs 261 deep and is still 71% accurate at that depth, where the public scouting board stops at 142 college players.
@@ -10,15 +12,14 @@ We rebuild every input column from public NCAA statistics, recompute the nine le
 
 **Mateo Biggs and Eric Gerber** — Khoury College of Computer Sciences, Northeastern University.
 
-The same models power a public site where you can browse the board, look up a player, or score a
-stat line of your own: https://codemateo15-ncaa-draft-app.share.connect.posit.cloud/
+The same models power a public site where you can browse the board, look up a player, or score a stat line of your own: https://codemateo15-ncaa-draft-app.share.connect.posit.cloud/
 
 ## What is where
 
 | path | what's in it |
 |---|---|
 | `paper/` | the manuscript and the notebook behind it |
-| `CSV+Code Files/Main XGBoost Files/` | the modelling notebooks, input matrices, simulated draft boards, and figures |
+| `CSV+Code Files/Main XGBoost Files/` | `draft_model.ipynb` — the paper's notebook — with its input matrix, `figures/`, and 2026 draft board |
 | `.../csv_editing_scripts/` | scripts that build the modelling matrix from the source data |
 | `.../MLBStatsAPIDraftDataAccess/` | MLB Stats API draft results: picks, signing bonuses, slot values |
 | `.../mlb_draft_prospects/` | MLB Pipeline top-250 prospect lists, 2021–2026 — the human benchmark |
@@ -30,17 +31,23 @@ stat line of your own: https://codemateo15-ncaa-draft-app.share.connect.posit.cl
 | `CSV+Code Files/all_drafts.json` | historical MLB draft results |
 | `CSV+Code Files/ncaabb_dataset.csv` | team-level NCAA season statistics |
 | `CSV+Code Files/RISE Expo Material/` | 2026 RISE Expo poster |
-| `CSV+Code Files/archive/` | earlier notebook versions and exploratory work, not used by the paper |
+| `CSV+Code Files/archive/` | superseded notebooks, figure sets, and boards from earlier runs; not used by the paper |
 
 ## Running it
 
 Python 3.12, with `xgboost`, `shap`, `scikit-learn`, `pandas`, `numpy`, `matplotlib`, and
 `codecarbon`.
 
-The paper's results come from `CSV+Code Files/Main XGBoost Files/xgboostAllWithTeamsV7_public_nomin_appS1.ipynb`.
-Its outputs are committed, so every number can be checked without re-running anything; the notebook
-also prints a machine-readable metrics ledger. To regenerate the underlying NCAA data rather than
-use the committed copy, see `CSV+Code Files/ncaa_scraper/README.md`.
+The paper's results come from `CSV+Code Files/Main XGBoost Files/draft_model.ipynb`. Its outputs are
+committed, so every number can be checked without re-running anything; the notebook also prints a
+machine-readable metrics ledger. It writes its figures to `figures/` and its draft board to
+`2026_simulated_board.csv`, both beside it.
+
+The notebook is generated, not hand-written: `csv_editing_scripts/make_v7_public_notebooks.py`
+derives the public variant from the private original, then `apply_app_stage1.py` refits Stage 1 the
+way the deployed app does. Both originals live in `CSV+Code Files/archive/old_jupyterFiles/`, and
+both scripts support `--check`. To regenerate the underlying NCAA data rather than use the committed
+copy, see `CSV+Code Files/ncaa_scraper/README.md`.
 
 ## Data sources
 

@@ -43,7 +43,9 @@ CSV_ROOT = ROOT.parent                  # CSV+Code Files
 PUBLIC_DIR = CSV_ROOT / "ncaa_public"
 STANDARDIZED = CSV_ROOT / "standardized"
 
-OUTPUT_PATH = ROOT / "batting_pitching_combined_with_rpi_public_v2.csv"
+# The qualified matrix is a byproduct: draft_model.ipynb reads the no-minimum one.
+ARCHIVE_DATA = ROOT.parent / "archive" / "data"
+OUTPUT_PATH = ARCHIVE_DATA / "batting_pitching_combined_with_rpi_public_v2.csv"
 FULL_OUTPUT_PATH = ROOT / "batting_pitching_combined_with_rpi_public_v2_nomin.csv"
 PRIVATE_REFERENCE = ROOT / "batting_pitching_combined_with_rpi_2026_eada.csv"
 # Frozen column order, so the build never needs the private file. Optional inputs
